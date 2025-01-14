@@ -143,7 +143,11 @@ Très souvent dans nos programmes nous avons besoin de répéter un certain nomb
 * La boucle `while` permet d'itérer un bloc d'instructions tant qu'une condition reste vraie.  
 
 ~~~rust
-
+let mut n = 0 ;
+while n < 101 {
+        n = n +1 ;
+        print! ("{n}\n")
+    }
 ~~~
 
 Avant d'introduire l'instruction `for` parlons un peu de la fonction `range()`. Cette fonction peut nous être très utile lorsque on veut itérer sur une suite de nombres. Elle génère des progressions arithmétiques.
