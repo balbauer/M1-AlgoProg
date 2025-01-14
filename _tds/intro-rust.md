@@ -110,9 +110,9 @@ L'instruction qui est sans doute la plus utile afin de permettre un tel comporte
 
 ~~~rust
 if age > 18 {
-        "Tu peux entrer."
+        print! ("Tu peux entrer.")
     } else {
-        "Tu es trop petit."
+        print!("Tu es trop petit.")
     }
 ~~~
 
@@ -120,10 +120,10 @@ A noter que lorsqu'on veut remettre un `if else` comme bloc pour un `else`, on n
 
 ~~~rust
 if age > 18 {
-        "Tu peux entrer."
+        print!("Tu peux entrer.")
     } else if a < b {
-        "Tu es trop petit."
-    } else {"Tu as tout juste l'âge."}
+        print!("Tu es trop petit.")
+    } else {print!("Tu as tout juste l'âge.")}
 }
 ~~~
 
@@ -154,11 +154,11 @@ La boucle `for` est très utile lorsque on veut répéter un bloc d'instructions
 
 ~~~rust
 for i in 0..10 {
-    println!("{i}\n");
+    print!("{i}\n");
 }
 ~~~
 
-Comme on va le voir un peu plus tard, la boucle `for` peut être utilisée très facilement pour parcourir les éléments d'une liste.
+Comme on va le voir un peu plus tard, la boucle `for` peut être utilisée très facilement pour parcourir de différentes structures de données.
 
 **:**{:.exercise} 
 
@@ -171,25 +171,25 @@ impaire. Itérez tant que `b` est supérieur à 0.
 
 **:**{:.exercise}
 
-Affichez la somme des cubes de tous les multiples de 3 compris entre 0 et 99 inclus. Utilisez pour cela l'instruction `for` et la fonction `range()`.
+Affichez la somme des cubes de tous les multiples de 3 compris entre 0 et 99 inclus. Utilisez pour cela l'instruction `for`.
 
 ## Fonctions
 
-Pour créer une fonction en Python, on commence par le mot-clé `def` (définition). Il doit être suivi par le nom de la fonction, la liste des paramètres entre parenthèses et un deux-points '`:`'. Le corps de la fonction commence à la ligne suivante et doit être écrit avec un retrait de quelques espaces.
-
+Pour créer une fonction en Rust, on va sortir de la fonction '`main`' et tout simplement créer une nouvelle fonction analogue à la fonction mais qui aura un autre nom. 
 Voici une fonction qui imprime les `n` premiers termes  de la suite *Fibonacci*.
 
-~~~python
->> def fibonacci(n):
-...     a, b = 0, 1
-...     for i in range(20):
-...         print(a, end=' ')
-...         a, b = b, a + b
-...     print(a)
-... 
->>> fibonacci(20)
-0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597 2584 4181 6765
+~~~rust
+fn main() {
+    fonction_qui_ne_fait_pas_grand_chose(); // Don't change this line
+}
+
+fn fonction_qui_ne_fait_pas_grand_chose() {
+ print!("la fonction a été appelée!");
+}
 ~~~
+
+On indiquera la liste des paramètres entre parenthèses et un deux-points '`:`'. Le corps de la fonction commence à la ligne suivante et doit être écrit avec un retrait de quelques espaces.
+
 
 On peut bien sûr écrire une fonction qui nous renvoie quelque chose. Ceci se fait avec le mot-clé `return`.
 Voici une fonction qui renvoie la somme des carrés des entiers de 0 à `n`.
