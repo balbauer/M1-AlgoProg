@@ -68,6 +68,7 @@ Si en Rust il n'est pas nécessaire d'écrire des lignes de code spécifiques po
 let n:i32 = 5;
 let _message:&str = 'Bonjour';
 let _pi:f32 = 3.14;
+let b:bool = true;
 ~~~
 
 * **Fonction** `print!()`. Pour afficher une chaine de caractères, on peut utiliser la fonction `print!()`. Si à l'intérieur de cette chaîne, on veut afficher des valeurs contenus dans des variables on utilisera les caractères '`{`' et '`}`'.
