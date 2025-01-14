@@ -133,11 +133,11 @@ Déclarez une variable et affectez lui un entier naturel. Testez en utilisant le
 
 **:**{:.exercise}
 
-Déclarez trois variables `a`, `b` et `c` correspondant aux coefficients de l'équation quadratique $$ax^2 + bx + c = 0$$. Calculez et affichez le discriminant $$\Delta = b^2 - 4ac$$ de l'équation. Testez en utilisant les instructions `if`,  et `else` la valeur du déterminant et calculez la ou les solutions de l'équation. Si le déterminant est négatif, affichez le message "*L'équation n'a pas de solutions*".
+Déclarez trois variables `a`, `b` et `c` correspondant aux coefficients de l'équation quadratique $$ax^2 + bx + c = 0$$. Calculez et affichez le discriminant $$\Delta = b^2 - 4ac$$ de l'équation. Testez en utilisant les instructions '`if`',  et '`else`' la valeur du déterminant et calculez la ou les solutions de l'équation. Si le déterminant est négatif, affichez le message "*L'équation n'a pas de solutions*".
 
 ## Boucles
 
-Très souvent dans nos programmes nous avons besoin de répéter un certain nombre d'instructions plusieurs fois. Python, comme probablement tous les autres langages que vous connaissez, possède dans ce but les instructions `while` et `for`.
+Très souvent dans nos programmes nous avons besoin de répéter un certain nombre d'instructions plusieurs fois. Python, comme probablement tous les autres langages que vous connaissez, possède dans ce but les instructions '`while`' et '`for`'.
 
 * La boucle `while` permet d'itérer un bloc d'instructions tant qu'une condition reste vraie.  
 
