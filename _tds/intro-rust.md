@@ -235,7 +235,7 @@ let nombres = [2,5,13,-35,0] ;
 ~~~
 Ou alors en donnant la taille, et une valeur par défaut avec la syntaxe `[expr; N]`.
 ~~~rust
-let nombres = ["toto";100] ;
+let tableau_toto = ["toto";100] ;
 ~~~
 ## Listes
 
