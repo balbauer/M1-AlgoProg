@@ -22,10 +22,11 @@ Puis pour exécuter le binaire on lancera
 ~~~
 
 ## Structure générale d'un fichier de code
-
+~~~rust
 fn main() {
 //Mettre son code ici
 }
+~~~
 
 ## Données et variables
 
