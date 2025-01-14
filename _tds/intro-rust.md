@@ -80,7 +80,10 @@ let b:bool = true;
 ~~~rust
 print!("toto");
 print!("toto a {n} ans.");
+print!("toto a {} ans.", n);
 ~~~
+
+On remarque que la deuxième méthode (c'est à dire `print!("toto a {} ans.", n);`) est plus robuste que la première (`print!("toto a {n} ans.");`) si l'on doit mettre autre chose qu'un nom de variable en entrée. On notera aussi la variante `println` qui fait automatiquement un passage à la ligne à la fin de l'affichage.
 
 * **Opérations arithmétiques sur les entiers et les flotants**
 On peut utiliser les opérations usuels `+-*/` aussi bien sur les entiers que les flotants. A noter que `\` est une division euclidienne dans un contexte discret, et s'interprête comme la division usuelle. On peut également utiliser `%` dans le contexte discret, ce qui correspond au modulo anglo-saxon.
