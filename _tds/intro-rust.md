@@ -447,17 +447,17 @@ Vous devez maintenant programmer le crible d'Ératosthène en  Python. Écrivez 
 
 ## Recherche dichotomique
 
-La recherche dichotomique est un algorithme très simple et efficace pour rechercher un élément dans une liste triée. 
+La recherche dichotomique est un algorithme très simple et efficace pour rechercher un élément dans un tableau trié. 
 
 Imaginez par exemple que nous souhaitons retrouver le numéro de téléphone d'une personne dans un annuaire qui est trié par ordre alphabétique. La recherche séquentielle, c.-à-d. parcourir l'annuaire du début en comparant tous les noms avec celui dont on cherche le numéro de téléphone peut être très longue (surtout si le nom recherché se trouve à la fin de l'annuaire). Une approche bien plus efficace est d'ouvrir l'annuaire au milieu et commencer par regarder si le nom se trouve à cette page. Si ce n'est pas le cas, et si le nom dont on cherche se trouve plus loin, alors on recommence la recherche avec la deuxième moitié de l'annuaire. Si le nom se trouve avant, alors on recommence avec la première moitié. 
 
-On peut voir qu'avec cette approche, on réduit à chaque étape la taille de l'annuaire à parcourir de la moitié. Cet algorithme fait partie alors des algorithmes dits *diviser pour régner* et a une complexité *logarithmique* en la taille de la liste.
+On peut voir qu'avec cette approche, on réduit à chaque étape la taille de l'annuaire à parcourir de la moitié. Cet algorithme fait partie alors des algorithmes dits *diviser pour régner* et a une complexité *logarithmique* en la taille de la tableau.
 
-Pour cet exercice, on suppose que l'utilisateur possède une liste croissante de nombres et on lui fournit un nombre qu'on suppose être dans la liste. Le but est de retourner l'indice du nombre recherché dans la liste.
+Pour cet exercice, on suppose que l'utilisateur possède une tableau croissante de nombres et on lui fournit un nombre qu'on suppose être dans la tableau. Le but est de retourner l'indice du nombre recherché dans la tableau.
 
-Si la liste fournie est [1,3,4,6,10,14,15] et l'élément qu'on cherche est 10, alors le programme doit retourner 4 (souvenez-vous que, dans une liste, les indices sont numérotés à partir de 0).
+Si la tableau fournie est [1,3,4,6,10,14,15] et l'élément qu'on cherche est 10, alors le programme doit retourner 4 (souvenez-vous que, dans une tableau, les indices sont numérotés à partir de 0).
 
-Écrivez une fonction `rechercheDichotomique(valeur, listeTriee)` qui prend en entrée une liste triée de nombres et une valeur à rechercher dans la liste et renvoie l'indice de la liste correspondant à cette valeur.
+Écrivez une fonction `rechercheDichotomique(valeur, tableauTriee)` qui prend en entrée une tableau triée de nombres et une valeur à rechercher dans la tableau et renvoie l'indice de la tableau correspondant à cette valeur.
 
 
 
