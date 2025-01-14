@@ -82,7 +82,7 @@ On peut utiliser les opérations usuels `+-*/` aussi bien sur les entiers que le
 
  Soient deux points de l'espace $$A$$ et $$B$$.  Déclarez 4 variables $$x_A$$, $$x_B$$, $$y_A$$ et $$y_B$$ correspondant aux coordonnées réelles de ces deux points et affectez-leur des valeurs. Calculez la distance entre $$A$$ et $$B$$, donnée par la formule $$\sqrt{(x_B - x_A)^2 + (y_B - y_A)^2}$$, et affichez le résultat à l'écran sous la forme *La distance entre $$A$$ et $$B$$ est : .*
 
-**Attention !** Vous devez utiliser pour cet exercice la méthode `math.sqrt()`. Pour utiliser cette méthode il faut d'abord importer le module math, avec l'instruction `import math`.
+**Attention !** Vous devez utiliser pour cet exercice la méthode `variable.sqrt()` qui permet de calculer la racine carré de la variable `variable`.
 
 ## Contrôle du flux d'exécution 
 
