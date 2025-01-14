@@ -22,7 +22,7 @@ Puis pour exécuter le binaire on lancera
 ~~~
 
 ## Structure générale d'un fichier de code
-En rust, lors de l'execution d'un programme, on lance la fonction main(). Ainsi le coeur du code qu'on veut éxecuter sera à l'intérieur de cette fonction. 
+En rust, lors de l'execution d'un programme, on lance la fonction main(). Ainsi le coeur du code qu'on veut éxecuter sera à l'intérieur de cette fonction. On note que tout ce qui suit '`//`' (sur la même ligne) sera ignoré par le compilateur.
 ~~~rust
 fn main() {
 //Mettre son code ici
@@ -211,7 +211,6 @@ fn sommeCarres(n:i32)->i32{
         total = total + i*i;
  }
 }
-
 ~~~
 
 Vous trouverez plus d'informations sur les fonctions en Rust ici : (https://jimskapt.github.io/rust-book-fr/ch03-03-how-functions-work.html)
@@ -221,12 +220,7 @@ Vous trouverez plus d'informations sur les fonctions en Rust ici : (https://jims
 Écrivez une fonction `tableDeMultiplication(base, fin)` qui prend en paramètre un entier `base` et un entier `fin`
 et affiche à l'écran les `fin` premiers éléments de la  table de multiplication de l'entier `base`.
 
-Par exemple :
-
-~~~python
->>> tableDeMultiplication(3, 10)
-0 3 6 9 12 15 18 21 24 27
-~~~
+Par exemple '`tableDeMultiplication(3, 10)`' doit retourner '`0 3 6 9 12 15 18 21 24 27`'.
 
 ## Listes
 
