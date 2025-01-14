@@ -50,7 +50,7 @@ let pi = 3.14;
 let b = true;
 ~~~
 
-Dans le cas où une variable à vocation à être modifié, on rajoutera le mot-clef `mut` au moment de sa définition.
+Dans le cas où une variable à vocation à être modifié, on rajoutera le mot-clef '`mut`' au moment de sa définition.
 
 ~~~rust
 let mut n = 5;
@@ -94,7 +94,7 @@ let f = 6./5. ;
 let b = n > 1;
 ~~~
 
-On peut également transformer des couples d'entiers ou de flotants en booléens avec les opérateurs d'ordre, d'égalité ou d'inégalité : `<`, `>`, `=`, et `!=` de la manière usuelle. 
+On peut également transformer des couples d'entiers ou de flotants en booléens avec les opérateurs d'ordre, d'égalité ou d'inégalité : '`<`', '`>`', '`=`', et '`!=`' de la manière usuelle. 
 
 **:**{:.exercise}
 
