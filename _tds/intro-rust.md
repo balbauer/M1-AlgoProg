@@ -22,7 +22,7 @@ Puis pour exécuter le binaire on lancera
 ~~~
 
 ## Structure générale d'un fichier de code
-En rust, lors de l'execution d'un programme, on lance la fonction main(). Ainsi le coeur du code qu'on veut éxecuter sera à l'intérieur de cette fonction. On note que tout ce qui suit '`//`' (sur la même ligne) sera ignoré par le compilateur.
+En rust, lors de l'execution d'un programme, on lance la fonction main(). Ainsi le coeur du code qu'on veut executer sera à l'intérieur de cette fonction. On note que tout ce qui suit '`//`' (sur la même ligne) sera ignoré par le compilateur.
 ~~~rust
 fn main() {
 //Mettre son code ici
