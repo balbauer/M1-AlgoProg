@@ -48,52 +48,25 @@ let message = 'Bonjour';
 let pi = 3.14;
 ~~~
 
+A noter que dans le cas où la variable est inutilisé, on peut la préfixer par un '`_`' pour ne pas avoir d'avertissement de la part du compilateur.
 
-On peut affecter une valeur à **plusieurs variables simultanément**. 
+On peut indiquer de quel type est la variable qu'on a déclaré.
 
-~~~python
->>> x = y = z = 1
->>> x
-1
->>> y
-1
->>> z
-1
+
+Si en Rust il n'est pas nécessaire d'écrire des lignes de code spécifiques pour définir le type des variables avant de pouvoir les utiliser, c'est une bonne habitude d'indiquer le type des variables qu'on utilise au moment de leur création afin de faciliter le deboggage. Il suffit d'assigner une valeur à un nom de variable pour que celle-ci soit automatiquement créée avec le type qui correspond à la valeur fournie. On dit alors que Rust est un langage à **typage statique**, contrairement aux langages à **typage dynamique** comme c'est le cas de Python. On peut vérifier ceci avec l'opérateur `type`.
+
+
+~~~rust
+let n :i32 = 5;
+let _message = 'Bonjour';
+let _pi = 3.14;
 ~~~
 
-On peut aussi effectuer des **affectations parallèles**.
+* **Fonction** `print!()`. Pour afficher une chaine de caractères, on peut utiliser la fonction `print!()`. Si à l'intérieur de cette chaîne, on veut afficher des valeurs contenus dans des variables on utilisera les caractères '`{`' et '`}`'.
 
-~~~python
->>> x, y = 3.5, 7
->>> x
-3.5
->>> y
-7
-~~~
-
-En Python, contrairement à d'autres langages de programmation, il n'est pas nécessaire d'écrire des lignes de code spécifiques pour définir le type des variables avant de pouvoir les utiliser. Il suffit d'assigner une valeur à un nom de variable pour que celle-ci soit automatiquement créée avec le type qui correspond à la valeur fournie. On dit alors que Python est un langage à **typage dynamique**, contrairement aux langages à **typage statique** comme c'est le cas des langages C ou Java. De plus, les variables peuvent changer de type au gré des affectations. On peut vérifier ceci avec l'opérateur `type`.
-
-~~~python
->>> x = 3
->>> type(x)
-<class 'int'>
->>> x = 3.5
->>> type(x)
-<class 'float'>
->>> x = 'message'
->>> type(x)
-<class 'str'>
-~~~
-
-* **Fonction** `print()`. Pour afficher une valeur à l'écran, il existe deux possibilités. Soit, on entre au clavier le nom de la variable et ensuite on appuie sur *Enter* (comme on a fait jusqu'à ici), soit on peut utiliser la fonction `print()`.
-
-~~~python
->>> n = 3.5
->>> print(n)
-3.5
->>> msg = 'Ça va ?'
->>> print(msg)
-Ça va ?
+~~~rust
+print!("toto")
+print!("toto a {n} ans.")
 ~~~
 
 **Attention** cependant à la différence entre `print a` (Python 2) et `print(a)` (Python 3).
