@@ -106,7 +106,7 @@ On peut également transformer des couples d'entiers ou de flotants en booléens
 
 Dans la plupart des programmes que vous allez écrire vous aurez besoin d'utiliser des instructions qui permettront au programme de suivre des chemins différents selon les circonstances. Pour ceci il est nécessaire de disposer d'instructions capables de *tester une certaine condition* et de modifier le comportement du programme en conséquence.
 
-L'instruction qui est sans doute la plus utile afin de permettre un tel comportement est l'instruction `if`. Son fonctionnement sous Rust est très simple. Si la condition à droite du mot-clef `if` est vraie, alors le bloc d'instructions entre les accolades `{`, et }` qui suit la condition sera exécuté. Sinon, ce sera le bloc entre accolade après le `else` qui sera executé.
+L'instruction qui est sans doute la plus utile afin de permettre un tel comportement est l'instruction `if`. Son fonctionnement sous Rust est très simple. Si la condition à droite du mot-clef '`if`' est vraie, alors le bloc d'instructions entre les accolades '`{`', et '`}`' qui suit la condition sera exécuté. Sinon, ce sera le bloc entre accolade après le `else` qui sera executé.
 
 ~~~rust
 if age > 18 {
@@ -119,7 +119,6 @@ if age > 18 {
 A noter que lorsqu'on veut remettre un `if else` comme bloc pour un `else`, on ne met pas d'accolade
 
 ~~~rust
-
 if age > 18 {
         "Tu peux entrer."
     } else if a < b {
