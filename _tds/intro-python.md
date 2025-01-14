@@ -12,56 +12,21 @@ Pendant ces TP vous travaillerez sur vos machines. Pour installer rust sur vos m
 >>> sudo curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 >>> rustup update
 ~~~
-Ensuite il vous suffit de rédiger votre code dans un fichier avec l'extension .rs.
+Ensuite il vous suffit de rédiger votre code dans un fichier (par exemple exemple.rs) avec l'extension .rs. Puis pour compiler le fichier on peut utiliser la commande :
 ~~~bash
->>> sudo apt-get install curl
->>> sudo curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
->>> rustup update
+>>> rustc exemple.rs -o exemple.bin
 ~~~
-
-## Python en mode calculatrice
-
-La plus simple utilisation que vous pouvez faire de Python est de l'utiliser comme une simple calculatrice. Vous pouvez essayer dans le terminal les calculs suivants :
-
-~~~python
->>> 2+6
-8
->>> 10 - 12   # Les espaces sont optionnels
--2
->>> 13 + 2*4  # La priorité des opérations est comme d'habitude
-21
->>> 21 / 4    # Attention ! En Python 2 cette instruction retourne 
-5.25          # la partie  entière de la division. En Python 3 c'est  
-              # une division flottante, même entre deux entiers
->>> 21 // 4   # Partie entière de la division
-5
->>> 21 % 4    # Reste de la division
-1
->>> 3 ** 4    # Opérateur puissance (3 à la puissance 4)
-81
->>> 10 < 2 * 13  # Comparaison
-True
->>> 10 < 4 or not 10 < 4  # Connecteurs booléens
-True
->>> 1 < 2 == 1 + 1 < 3   # Comparaisons chaînées
-True
+Puis pour exécuter le binaire on lancera
+~~~bash
+>>> ./exemple.bin
 ~~~
-
-**:**{:.exercise} Calculer :
-
-
-- $$5 \cdot (1293 - 390)$$,
-
-- La partie entière ainsi que le reste de la division de 1234 par 7,
-
-- $$13^{13}$$.
 
 
 ## Données et variables
 
 Pour pouvoir accéder aux données qu'un programme manipule on fait usage d'un nombre de **variables** de différents types. Une variable apparaît dans un langage de programmation sous son *nom de variable*, mais il ne s'agit de rien d'autre qu'une référence désignant l'adresse mémoire où sont stockées les données.
 
-En Python il existe un nombre de règles simples sur les noms de variables qu'il faut respecter :
+En Rust il existe un nombre de règles simples sur les noms de variables qu'il faut respecter :
 
 * Seules les lettres a -> z,  A -> Z, les chiffres 0-9 et le caractère '`_`' sont autorisés.
 * Le nom d'une variable doit toujours commencer par une lettre.
@@ -71,7 +36,7 @@ Une bonne habitude à prendre est d'écrire les noms de variables en minuscules 
 
 Le signe '`=`' est utilisé afin d'affecter une valeur à une variable. 
 
-~~~python
+~~~rust
 >>> n = 5
 >>> message = 'Bonjour'
 >>> pi = 3.14
