@@ -47,6 +47,7 @@ Le mot clef '`let`' et le signe '`=`' est utilisé afin d'affecter une valeur à
 let n = 5;
 let message = 'Bonjour';
 let pi = 3.14;
+let b = true;
 ~~~
 
 On peut affecter une valeur à **plusieurs variables simultanément**. 
@@ -72,12 +73,20 @@ let _pi:f32 = 3.14;
 * **Fonction** `print!()`. Pour afficher une chaine de caractères, on peut utiliser la fonction `print!()`. Si à l'intérieur de cette chaîne, on veut afficher des valeurs contenus dans des variables on utilisera les caractères '`{`' et '`}`'.
 
 ~~~rust
-print!("toto")
-print!("toto a {n} ans.")
+print!("toto");
+print!("toto a {n} ans.");
 ~~~
 
 * **Opérations arithmétiques sur les entiers et les flotants**
 On peut utiliser les opérations usuels `+-*/` aussi bien sur les entiers que les flotants. A noter que `\` est une division euclidienne dans un contexte discret, et s'interprête comme la division usuelle. On peut également utiliser `%` dans le contexte discret, ce qui correspond au modulo anglo-saxon.
+
+~~~rust
+let n = (3 + 20) mod 5;
+let f = 6./5. ;
+let b = n > 1;
+~~~
+
+On peut également transformer des couples d'entiers ou de flotants en booléens avec les opérateurs d'ordre, d'égalité ou d'inégalité : `<`, `>`, `=`, et `!=` de la manière usuelle. 
 
 **:**{:.exercise}
 
@@ -89,11 +98,26 @@ On peut utiliser les opérations usuels `+-*/` aussi bien sur les entiers que le
 
 Dans la plupart des programmes que vous allez écrire vous aurez besoin d'utiliser des instructions qui permettront au programme de suivre des chemins différents selon les circonstances. Pour ceci il est nécessaire de disposer d'instructions capables de *tester une certaine condition* et de modifier le comportement du programme en conséquence.
 
-L'instruction qui est sans doute la plus utile afin de permettre un tel comportement est l'instruction `if`. Son fonctionnement sous Python est très simple. Si la condition à droite du mot-clé `if` est vraie, alors le bloc d'instructions en dessus est exécuté. 
+L'instruction qui est sans doute la plus utile afin de permettre un tel comportement est l'instruction `if`. Son fonctionnement sous Rust est très simple. Si la condition à droite du mot-clé `if` est vraie, alors le bloc d'instructions entre les accolades `{`, et }` qui suit la condition sera exécuté. Sinon, ce sera le bloc entre accolade après le `else` qui sera executé.
 
-~~~python
->>> if age > 18 :
-...     print("La personne peut voter.")
+~~~rust
+if a > b {
+        a
+    } else {
+        b
+    }
+~~~
+
+A noter que lorsqu'on veut remettre un `if else` comme bloc pour un `else`, on ne met pas d'accolade
+
+~~~rust
+
+if a > b {
+        a
+    } else if a < b {
+        b
+    } else {a-b}
+}
 ~~~
 
 #### Indentation
