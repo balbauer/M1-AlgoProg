@@ -1,12 +1,12 @@
 ---
-title: Introduction à Python
+title: Introduction à Rust
 ---
 
-Python est un langage de programmation orienté objet (mais oublions le côté objet pour l'instant). Sa première version a été écrite par Guido van Rossum, qui était un grand fan de Monty Python, en 1991. 
+Rust est un langage de programmation multi-paradigme.
 
 Ce mini-tutoriel est une introduction très basique et rapide à la syntaxe et aux règles du langage. Si vous voulez approfondir plus, plein de tutoriels bien faits existent sur le net, n'hésitez pas à les consulter.
 
-Pendant ces TP nous allons travailler avez l'environnement `Jupyter` et l'interpréteur `python3`. Tout cela est disponible sur les cartables numériques, mais aussi sur le serveur de calcul [https://jupyter.ens.uvsq.fr/](https://jupyter.ens.uvsq.fr/). Cliquez sur `File --> New --> Python 3` pour créer un nouveau *notebook*. Avec cet environnement, il est possible de revenir en arrière et modifier vos lignes de code. Les notebooks sont sauvegardés automatiquement dans des fichiers d'extension `.ipynb`. En les utilisant, vous retrouverez votre travail dans votre espace en ligne d'une semaine sur l'autre.
+Pendant ces TP sur vos machines. Tout cela est disponible sur les cartables numériques, mais aussi sur le serveur de calcul [https://jupyter.ens.uvsq.fr/](https://jupyter.ens.uvsq.fr/). Cliquez sur `File --> New --> Python 3` pour créer un nouveau *notebook*. Avec cet environnement, il est possible de revenir en arrière et modifier vos lignes de code. Les notebooks sont sauvegardés automatiquement dans des fichiers d'extension `.ipynb`. En les utilisant, vous retrouverez votre travail dans votre espace en ligne d'une semaine sur l'autre.
 
 `python3` est aussi accessible directement dans un terminal : tapez `python3` pour lancer l'interpréteur. 
 
