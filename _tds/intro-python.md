@@ -6,12 +6,18 @@ Rust est un langage de programmation multi-paradigme.
 
 Ce mini-tutoriel est une introduction très basique et rapide à la syntaxe et aux règles du langage. Si vous voulez approfondir plus, plein de tutoriels bien faits existent sur le net, n'hésitez pas à les consulter.
 
-Pendant ces TP vous travaillerez sur vos machines. Pour installer rust sur vos machines.
+Pendant ces TP vous travaillerez sur vos machines. Pour installer rust sur vos machines, vous pouvez lancer ces commandes sur une machine Ubuntu mise à jour (2025).
 ~~~bash
 >>> sudo apt-get install curl
 >>> sudo curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-
-`python3` est aussi accessible directement dans un terminal : tapez `python3` pour lancer l'interpréteur. 
+>>> rustup update
+~~~
+Ensuite il vous suffit de rédiger votre code dans un fichier avec l'extension .rs.
+~~~bash
+>>> sudo apt-get install curl
+>>> sudo curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+>>> rustup update
+~~~
 
 ## Python en mode calculatrice
 
