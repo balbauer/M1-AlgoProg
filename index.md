@@ -4,13 +4,13 @@ title: Home
 
 ## Info pratiques
 
-Cours & TD le mercredi de 13h50 à 17h00, salle G107 Bâtiment Sphie Germain (en Amphi J exceptionnellement le 19 avril)
+Cours & TD le mercredi de 13h50 à 17h00, salle G107 Bâtiment Sophie Germain 
 
 **Chargés de cours et TD :** Kahina Bouchama et [Yann Rotella](https://rotella.fr/)
 
 **Serveur pour les TPs:** [https://jupyter.ens.uvsq.fr/](https://jupyter.ens.uvsq.fr/)
 
-**Lien cours Kahina** [Lien](https://github.com/Kahinabouchama/cours_analyse_algo)
+<!--**Lien cours Kahina** [Lien](https://github.com/Kahinabouchama/cours_analyse_algo)-->
 
 ## Calendrier
 
