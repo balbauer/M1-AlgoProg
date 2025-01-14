@@ -205,11 +205,12 @@ On peut bien sûr écrire une fonction qui nous renvoie quelque chose. Dans ce c
 Voici une fonction qui renvoie la somme des carrés des entiers de 0 à `n`.
 
 ~~~rust
-fn sommeCarres(n:i32)->i32{
+fn somme_carres(n:i32)->i32{
  let mut total:i32 = 0 ;
  for i in 1..n {
         total = total + i*i;
  }
+ total
 }
 ~~~
 
