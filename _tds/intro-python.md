@@ -57,7 +57,7 @@ Si en Rust il n'est pas nécessaire d'écrire des lignes de code spécifiques po
 
 
 ~~~rust
-let n :i32 = 5;
+let n:i32 = 5;
 let _message = 'Bonjour';
 let _pi = 3.14;
 ~~~
@@ -69,15 +69,7 @@ print!("toto")
 print!("toto a {n} ans.")
 ~~~
 
-**Attention** cependant à la différence entre `print a` (Python 2) et `print(a)` (Python 3).
-
-On peut combiner texte et variables dans une même fonction `print()`.
-
-~~~python
->>> poids = 3.67
->>> print("Le poids du nouveau-né est", poids, "kilos.")
-Le poids du nouveau-né est 3.67 kilos.
-~~~
+* **Opérations arithmétiques sur les entiers** 
 
 **:**{:.exercise}
 
