@@ -20,7 +20,7 @@ Cours & TD le mercredi de 13h50 à 17h00, salle G107 Bâtiment Sophie Germain
    - Tri par insertion
    - Analyse de complexité
 
-**TD :** [Introduction à Rust](tds/intro-python)
+**TD :** [Introduction à Rust](tds/intro-rust)
 
 
 
