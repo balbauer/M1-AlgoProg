@@ -35,11 +35,8 @@ Pour pouvoir accéder aux données qu'un programme manipule on fait usage d'un n
 
 En Rust, comme dans de nombreux langages de programmation, il existe un nombre de règles simples sur les noms de variables qu'il faut respecter :
 
-* Seules les lettres a -> z,  A -> Z, les chiffres 0-9 et le caractère '`_`' sont autorisés.
+* Seules les lettres a -> z, les chiffres 0-9 et le caractère '`_`' sont autorisés.
 * Le nom d'une variable doit toujours commencer par une lettre.
-* La casse est significative. Par exemple `vitesse`, `Vitesse` et `VITESSE` désignent des variables différentes.
-
-Une bonne habitude à prendre est d'écrire les noms de variables en minuscules y compris la première lettre. Il s'agit d'une convention qui est largement respectée. N'utilisez les majuscules qu'à l'intérieur du nom afin de faciliter la lisibilité. Par exemple : `matriceDesCoefficients`.
 
 Le mot clef '`let`' et le signe '`=`' est utilisé afin d'affecter une valeur à une variable. 
 
@@ -176,34 +173,45 @@ Affichez la somme des cubes de tous les multiples de 3 compris entre 0 et 99 inc
 ## Fonctions
 
 Pour créer une fonction en Rust, on va sortir de la fonction '`main`' et tout simplement créer une nouvelle fonction analogue à la fonction mais qui aura un autre nom. 
-Voici une fonction qui imprime les `n` premiers termes  de la suite *Fibonacci*.
+Voici la nouvelle structure du code globale.
 
 ~~~rust
 fn main() {
-    fonction_qui_ne_fait_pas_grand_chose(); // Don't change this line
+    fonction_qui_ne_fait_pas_grand_chose(); 
 }
 
 fn fonction_qui_ne_fait_pas_grand_chose() {
- print!("la fonction a été appelée!");
+ print!("La fonction a été appelée!");
 }
 ~~~
 
-On indiquera la liste des paramètres entre parenthèses et un deux-points '`:`'. Le corps de la fonction commence à la ligne suivante et doit être écrit avec un retrait de quelques espaces.
+On indiquera la liste des paramètres entre parenthèses, en indiquant à chaque fois le type de l'argument après un deux-points '`:`' qui suit le nom de l'argument. Le corps de la fonction commence à la ligne suivante et doit être écrit avec un retrait de quelques espaces.
+Voici une fonction qui imprime les `n` premiers termes  de la suite *Fibonacci*.
 
+~~~rust
+fn fibonacci(n:i32) {
+ let mut fin:i32 = 1 ;
+ let mut fnplusun:i32 = 1;
+ for _i in 1..n {
+        print! ("{fin}\n");
+        let a:i32 = fnplusun;
+        fnplusun = fin + fnplusun;
+        fin =a;
+ }
+}
+~~~
 
-On peut bien sûr écrire une fonction qui nous renvoie quelque chose. Ceci se fait avec le mot-clé `return`.
+On peut bien sûr écrire une fonction qui nous renvoie quelque chose. Dans ce cas, il faut écrire quel est le type renvoyé attendu avec le mot-clef '``'. Ceci se fait avec le mot-clé `return`.
 Voici une fonction qui renvoie la somme des carrés des entiers de 0 à `n`.
 
-~~~python
->>> def sommeCarres(n):
-...     sum = 0
-...     for i in range(n):
-...         sum += i**2
-...     return sum
-... 
->>> sommeCarres(20)
-2470
->>> 
+~~~rust
+fn sommeCarres(n:i32)->i32{
+ let mut total:i32 = 0 ;
+ for i in 1..n {
+        total = total + i*i;
+ }
+}
+
 ~~~
 
 Vous trouverez plus d'informations sur les fonctions en Python ici : [docs.python.org](https://docs.python.org/3.1/tutorial/controlflow.html#)
