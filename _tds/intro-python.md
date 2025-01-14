@@ -21,12 +21,17 @@ Puis pour exécuter le binaire on lancera
 >>> ./exemple.bin
 ~~~
 
+## Structure générale d'un fichier de code
+
+fn main() {
+//Mettre son code ici
+}
 
 ## Données et variables
 
 Pour pouvoir accéder aux données qu'un programme manipule on fait usage d'un nombre de **variables** de différents types. Une variable apparaît dans un langage de programmation sous son *nom de variable*, mais il ne s'agit de rien d'autre qu'une référence désignant l'adresse mémoire où sont stockées les données.
 
-En Rust il existe un nombre de règles simples sur les noms de variables qu'il faut respecter :
+En Rust, comme dans de nombreux langages de programmation, il existe un nombre de règles simples sur les noms de variables qu'il faut respecter :
 
 * Seules les lettres a -> z,  A -> Z, les chiffres 0-9 et le caractère '`_`' sont autorisés.
 * Le nom d'une variable doit toujours commencer par une lettre.
@@ -34,12 +39,12 @@ En Rust il existe un nombre de règles simples sur les noms de variables qu'il f
 
 Une bonne habitude à prendre est d'écrire les noms de variables en minuscules y compris la première lettre. Il s'agit d'une convention qui est largement respectée. N'utilisez les majuscules qu'à l'intérieur du nom afin de faciliter la lisibilité. Par exemple : `matriceDesCoefficients`.
 
-Le signe '`=`' est utilisé afin d'affecter une valeur à une variable. 
+Le mot clef '`let`' et le signe '`=`' est utilisé afin d'affecter une valeur à une variable. 
 
 ~~~rust
->>> n = 5
->>> message = 'Bonjour'
->>> pi = 3.14
+let n = 5;
+let message = 'Bonjour';
+let pi = 3.14;
 ~~~
 
 
