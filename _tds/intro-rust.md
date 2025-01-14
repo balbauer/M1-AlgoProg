@@ -218,10 +218,13 @@ Vous trouverez plus d'informations sur les fonctions en Rust ici : (https://jims
 
 **:**{:.exercise}
 
-Écrivez une fonction `tableDeMultiplication(base, fin)` qui prend en paramètre un entier `base` et un entier `fin`
+Écrivez une fonction `table_de_multiplication(base, fin)` qui prend en paramètre un entier `base` et un entier `fin`
 et affiche à l'écran les `fin` premiers éléments de la  table de multiplication de l'entier `base`.
 
-Par exemple '`tableDeMultiplication(3, 10)`' doit retourner '`0 3 6 9 12 15 18 21 24 27`'.
+Par exemple '`table_de_multiplication(3, 10)`' doit retourner '`0 3 6 9 12 15 18 21 24 27`'.
+
+## Tableaux
+
 
 ## Listes
 
