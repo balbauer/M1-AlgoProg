@@ -214,7 +214,7 @@ fn somme_carres(n:i32)->i32{
 }
 ~~~
 
-Vous trouverez plus d'informations sur les fonctions en Rust ici : (https://jimskapt.github.io/rust-book-fr/ch03-03-how-functions-work.html)
+Vous trouverez plus d'informations sur les fonctions en Rust ici : [rust-book-fr](https://jimskapt.github.io/rust-book-fr/ch03-03-how-functions-work.html)
 
 **:**{:.exercise}
 
