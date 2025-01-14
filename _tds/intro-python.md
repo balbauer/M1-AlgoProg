@@ -65,7 +65,7 @@ Si en Rust il n'est pas nécessaire d'écrire des lignes de code spécifiques po
 ~~~rust
 let n:i32 = 5;
 let _message:&str = 'Bonjour';
-let _pi = 3.14;
+let _pi:f32 = 3.14;
 ~~~
 
 * **Fonction** `print!()`. Pour afficher une chaine de caractères, on peut utiliser la fonction `print!()`. Si à l'intérieur de cette chaîne, on veut afficher des valeurs contenus dans des variables on utilisera les caractères '`{`' et '`}`'.
@@ -75,9 +75,10 @@ print!("toto")
 print!("toto a {n} ans.")
 ~~~
 
-* **Opérations arithmétiques sur les entiers** 
+* **Opérations arithmétiques sur les entiers et les flotants**
+On peut utiliser les opérations usuels `+-*/` aussi bien sur les entiers que les flotants. A noter que `\` est une division euclidienne dans un contexte discret, et s'interprête comme la division usuelle. On peut également utiliser `%` dans le contexte discret, ce qui correspond au modulo anglo-saxon.
 
-**:**{:.exercise}
+**:**{:.exercice}
 
  Soient deux points de l'espace $$A$$ et $$B$$.  Déclarez 4 variables $$x_A$$, $$x_B$$, $$y_A$$ et $$y_B$$ correspondant aux coordonnées réelles de ces deux points et affectez-leur des valeurs. Calculez la distance entre $$A$$ et $$B$$, donnée par la formule $$\sqrt{(x_B - x_A)^2 + (y_B - y_A)^2}$$, et affichez le résultat à l'écran sous la forme *La distance entre $$A$$ et $$B$$ est : .*
 
