@@ -229,12 +229,14 @@ Par exemple `table_de_multiplication(3, 10)` doit retourner `0 3 6 9 12 15 18 21
 ## Tableaux
 
 Les tableaux sont des structures de données où l'accès à une donnée (pour peu qu'on connaisse son adresse) est peu coûteuse, mais dont la taille est définie à la création, et n'a pas vocation à changer. A noter qu'il s'agit d'une donnée intraséquement dynamique, (et donc qu'il n'y a pas besoin d'utiliser `mut` si on souhaite modifier le contenu des cases du tableau). 
-On peut les créer en les déclarant explicitement
+On peut les créer en les déclarant explicitement :
 ~~~rust
 let nombres = [2,5,13,-35,0] ;
 ~~~
-
-
+Ou alors en donnant la taille, et une valeur par défaut avec la syntaxe `[expr; N]`.
+~~~rust
+let nombres = ["toto";100] ;
+~~~
 ## Listes
 
 Les listes sont des structures ordonnées de données. En Python, une liste est définie à l'aide des crochets.
