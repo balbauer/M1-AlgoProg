@@ -6,21 +6,21 @@ title: Home
 
 Cours & TD le mercredi de 13h50 à 17h00, salle G107 Bâtiment Sophie Germain 
 
-**Chargés de cours et TD :** Kahina Bouchama et [Yann Rotella](https://rotella.fr/)
+**Chargés de cours et TD :** Balthazar Bauer
 
-**Serveur pour les TPs:** [https://jupyter.ens.uvsq.fr/](https://jupyter.ens.uvsq.fr/)
+<!--**Serveur pour les TPs:** [https://jupyter.ens.uvsq.fr/](https://jupyter.ens.uvsq.fr/)-->
 
 <!--**Lien cours Kahina** [Lien](https://github.com/Kahinabouchama/cours_analyse_algo)-->
 
 ## Calendrier
 
-#### 1 février Kahina Bouchama
+#### 29 Janvier
 
 **Introduction à l'analyse des algorithmes**
    - Tri par insertion
    - Analyse de complexité
 
-**TD :** [(Ré)-introduction à Python](tds/intro-python)
+**TD :** [Introduction à Rust](tds/intro-python)
 
 
 
