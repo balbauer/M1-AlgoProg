@@ -48,6 +48,12 @@ let message = 'Bonjour';
 let pi = 3.14;
 ~~~
 
+On peut affecter une valeur à **plusieurs variables simultanément**. 
+
+~~~rust
+let (x, y, z) = (1, 2.0, "Hello");
+~~~
+
 A noter que dans le cas où la variable est inutilisé, on peut la préfixer par un '`_`' pour ne pas avoir d'avertissement de la part du compilateur.
 
 On peut indiquer de quel type est la variable qu'on a déclaré.
@@ -58,7 +64,7 @@ Si en Rust il n'est pas nécessaire d'écrire des lignes de code spécifiques po
 
 ~~~rust
 let n:i32 = 5;
-let _message = 'Bonjour';
+let _message:&str = 'Bonjour';
 let _pi = 3.14;
 ~~~
 
