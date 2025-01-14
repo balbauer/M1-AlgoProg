@@ -214,7 +214,7 @@ fn sommeCarres(n:i32)->i32{
 
 ~~~
 
-Vous trouverez plus d'informations sur les fonctions en Python ici : [docs.python.org](https://docs.python.org/3.1/tutorial/controlflow.html#)
+Vous trouverez plus d'informations sur les fonctions en Rust ici : ([https://docs.python.org/3.1/tutorial/controlflow.html#](https://jimskapt.github.io/rust-book-fr/ch03-03-how-functions-work.html))
 
 **:**{:.exercise}
 
