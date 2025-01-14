@@ -228,7 +228,7 @@ Par exemple `table_de_multiplication(3, 10)` doit retourner `0 3 6 9 12 15 18 21
 
 ## Tableaux
 
-Les tableaux sont des structures de données où l'accès à une donnée (pour peu qu'on connaisse son adresse) est peu coûteuse, mais dont la taille est définie à la création, et n'a pas vocation à changer. A noter qu'il s'agit d'une donnée intraséquement dynamique, (et donc qu'il n'y a pas besoin d'utiliser `mut` si on souhaite modifier le contenu des cases du tableau). 
+Les tableaux sont des structures de données où l'accès à une donnée (pour peu qu'on connaisse son adresse) est peu coûteuse, mais dont la taille est définie à la création, et n'a pas vocation à changer.
 On peut les créer en les déclarant explicitement :
 ~~~rust
 let nombres = [2,5,13,-35,0] ;
@@ -236,6 +236,16 @@ let nombres = [2,5,13,-35,0] ;
 Ou alors en donnant la taille, et une valeur par défaut avec la syntaxe `[expr; N]`.
 ~~~rust
 let tableau_toto = ["toto";100] ;
+~~~
+On peut accéder au contenu d'une case grâce aux crochets.
+~~rust
+let tableau_toto = ["toto";100] ;
+let u = tableau_toto[99];
+~~~
+Et si le tableau est mutable, on peut modifier les cases de ce tableau :
+~~rust
+let mut tableau_toto = ["toto";100] ;
+let tableau_toto[99]= "joujou" ;
 ~~~
 ## Listes
 
