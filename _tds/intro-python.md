@@ -149,27 +149,13 @@ while n < 101 {
     }
 ~~~
 
-Avant d'introduire l'instruction `for` parlons un peu de la fonction `range()`. Cette fonction peut nous être très utile lorsque on veut itérer sur une suite de nombres. Elle génère des progressions arithmétiques.
 
-~~~python
-range(2, 10) # 2, 3, 4, 5, 6, 7, 8, 9
-range(0, 15, 2) # 0, 2, 4, 6, 8, 10, 12, 14
-range(10, -50, -10) # 10, 0, -10, -20, -30, -40
-~~~
+La boucle `for` est très utile lorsque on veut répéter un bloc d'instructions un nombre de fois connu à l'avance. Si on veut par exemple imprimer tous les nombres de 0 à 10, voici comment on peut le faire à l'aide de l'instruction `for` et de la de la fonction `range`.
 
-
-La boucle `for` est très utile lorsque on veut répéter un bloc d'instructions un nombre de fois connu à l'avance. Si on veut par exemple imprimer tous les nombres de 0 à 5, voici comment on peut le faire à l'aide de l'instruction `for` et de la de la fonction `range`.
-
-~~~python
->>> for i in range(6): # N'oubliez pas le deux-points !
-...     print(i)        # N'oubliez pas l'indentation !
-...
-0
-1
-2
-3
-4
-5
+~~~rust
+for i in 0..10 {
+    println!("{i}\n");
+}
 ~~~
 
 Comme on va le voir un peu plus tard, la boucle `for` peut être utilisée très facilement pour parcourir les éléments d'une liste.
