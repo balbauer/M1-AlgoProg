@@ -36,6 +36,7 @@ On peut ajouter de nouvelles bibliothèques à notre projet avec `cargo add`. Pa
 >>> cargo add fastrand
 ~~~
 
+
 ## Premières manipulations de la bibliothèque `fastrand`
 **:**{:.exercise} 
 On va commencer par créer une fonction `tableaualeatoire(taille,a,b)` qui génère une tableau de taille `taille` où les entiers sont tirés uniformément dans l'intervalle `[a; b[`. Pour générer un entier `n` un nombre entier aléatoire compris dans l'intervalle `[a; b[`, on peut écrire :
@@ -85,13 +86,13 @@ Tri-Bulles(T)
 
 * Implémentez cette version de l'algorithme en Rust et testez-là en lui donnant en entrée un tableau aléatoire de nombres entiers en utilisant la fonction `tableaualeatoire(taille,a,b)`.
 
-* Pourquoi la version de l'algorithme que vous venez d'implémenter n'est pas optimale ? Pour répondre à cette question, on peut remarquer que dans l'exemple précédent le tableau est déjà trié après seulement le deuxième passage. Dans ce cas, a-t-on besoin d'exécuter l'algorithme jusqu'à la fin ?
+* Pourquoi la version de l'algorithme que vous venez d'implémenter n'est pas optimale? Pour répondre à cette question, on peut remarquer que dans l'exemple précédent le tableau est déjà trié après seulement le deuxième passage. Dans ce cas, a-t-on besoin d'exécuter l'algorithme jusqu'à la fin?
 
 * Réfléchissez à une façon de rendre l'algorithme plus optimisé. Implémentez cette méthode et testez-là.
 
-* Quel est le temps d'exécution de cet algorithme dans le cas le plus défavorable ? Et dans le cas le plus favorable ?
+* Quel est le temps d'exécution de cet algorithme dans le cas le plus défavorable? Et dans le cas le plus favorable?
 
-* Calculez en pratique le temps d'exécution de vos deux tris (version naïve et version optimisée). Pour cela, il faut introduire au début de votre script le module `time` en écrivant `import time`. Débutez le compteur en insérant l'instruction `debut = time.time()` et arrêtez-le avec l'instruction `fin = time.time()`. Imprimez le temps en secondes écoulé en écrivant `print("Le temps en secondes écoulé pour faire le tri est", fin-debut)`. Afin de pouvoir observer la différence, générez des tableaux de taille très grande (par exemple de taille 50000). 
+* Calculez en pratique le temps d'exécution de vos deux tris (version naïve et version optimisée). Pour cela, peut utiliser la fonction `Instant:now()` de la manière suivante débutez le compteur en insérant l'instruction `debut = time.time()` et arrêtez-le avec l'instruction `let now = std::time::Instant::now();`. Imprimez le temps en secondes écoulé en écrivant `print("{}", now.elapsed().as_secs())`. Afin de pouvoir observer la différence de temps entre les deux implémentations, générez des tableaux de taille très grande (par exemple de taille 50000). 
 
 
 ## Tri par sélection (selection sort)
