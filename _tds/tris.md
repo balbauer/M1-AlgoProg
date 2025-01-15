@@ -38,7 +38,7 @@ On peut ajouter de nouvelles bibliothèques à notre projet avec `cargo add`. Pa
 
 ## Premières manipulations de la bibliothèque `fastrand`
 **:**{:.exercise} 
-On va commencer par créer une fonction `tableaualeatoire(taille,a,b)` qui génère une tableau de taille `taille` où les entiers sont tirés uniformément dans l'intervalle `[a; b[`. Pour générer un entier `n` un nombre entier aléatoire compris dans l'intervalle `[a; b[`on peut écrire :
+On va commencer par créer une fonction `tableaualeatoire(taille,a,b)` qui génère une tableau de taille `taille` où les entiers sont tirés uniformément dans l'intervalle `[a; b[`. Pour générer un entier `n` un nombre entier aléatoire compris dans l'intervalle `[a; b[`, on peut écrire :
 
 ~~~rust
 let n = fastrand::i32(a..b);
