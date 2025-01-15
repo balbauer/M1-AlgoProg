@@ -31,20 +31,20 @@ $$[5, 1, 2, 4, 3].$$
 Voici comment se passe le premier *passage*.
 
 ~~~rust
-[5, 1, 2, 4, 3] # On compare 5 et 1 et on les inverse.
-[1, 5, 2, 4, 3] # On compare 5 et 2 et on les inverse.
-[1, 2, 5, 4, 3] # On compare 5 et 4 et on les inverse.
-[1, 2, 4, 5, 3] # On compare 5 et 3 et on les inverse.
-[1, 2, 4, 3, 5] # Fin du premier passage.
+[5, 1, 2, 4, 3] \\ On compare 5 et 1 et on les inverse.
+[1, 5, 2, 4, 3] \\ On compare 5 et 2 et on les inverse.
+[1, 2, 5, 4, 3] \\ On compare 5 et 4 et on les inverse.
+[1, 2, 4, 5, 3] \\ On compare 5 et 3 et on les inverse.
+[1, 2, 4, 3, 5] \\ Fin du premier passage.
 ~~~
 
 Comme on peut le voir, l'algorithme compare à chaque fois des éléments adjacents et les échange s'ils ne sont pas dans l'ordre. À la fin de ce premier passage, l'élément le plus grand du tableau (ici l'élément 5) se retrouve à la fin du tableau à sa position définitive. Le tableau n'est cependant pas encore complètement trié et nous devons donc continuer par un nouveau passage. Lors de ce nouveau passage on peut ignorer la dernière case du tableau, car celle-ci contient déjà l'élément le plus grand et ne nécessite donc pas d'être traitée à nouveau.  
 
 ~~~rust
-[1, 2, 4, 3, 5] # On compare 1 et 2 et on ne fait rien.
-[1, 2, 4, 3, 5] # On compare 2 et 4 et on ne fait rien.
-[1, 2, 4, 3, 5] # On compare 4 et 3 et on les inverse.
-[1, 2, 3, 4, 5] # Fin du deuxième passage
+[1, 2, 4, 3, 5] \\ On compare 1 et 2 et on ne fait rien.
+[1, 2, 4, 3, 5] \\ On compare 2 et 4 et on ne fait rien.
+[1, 2, 4, 3, 5] \\ On compare 4 et 3 et on les inverse.
+[1, 2, 3, 4, 5] \\ Fin du deuxième passage
 ~~~
 
 On recommence par faire un nouveau passage pour les 3 premières cases du tableau qui ne sont potentiellement pas encore dans l'ordre.
