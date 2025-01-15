@@ -1,6 +1,24 @@
 ---
 title: Implémentation des algorithmes de tri en Rust
 ---
+## Projet et bibliothèque en Rust
+
+Dans ce chapitre, nous allons apprendre à créer un projet, ce qui va nous permettre d'utiliser des bibliothèques dans notre programme.
+Pour commencer
+~~~bash
+>>> cargo new projet
+~~~
+
+On remarque la création de toute une arborescence de fichiers de et de dossier à partir du dossier `projet`.
+
+~~~bash
+>>> ls -R projet
+projet:
+Cargo.toml  src
+
+projet/src:
+main.rs
+~~~
 
 ## Tri à bulles (bubble sort)
 
