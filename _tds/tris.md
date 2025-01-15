@@ -1,5 +1,5 @@
 ---
-title: Implémentation des algorithmes de tri en Python
+title: Implémentation des algorithmes de tri en Rust
 ---
 
 ## Tri à bulles (bubble sort)
@@ -12,7 +12,7 @@ $$[5, 1, 2, 4, 3].$$
 
 Voici comment se passe le premier *passage*.
 
-~~~python
+~~~rust
 [5, 1, 2, 4, 3] # On compare 5 et 1 et on les inverse.
 [1, 5, 2, 4, 3] # On compare 5 et 2 et on les inverse.
 [1, 2, 5, 4, 3] # On compare 5 et 4 et on les inverse.
@@ -22,7 +22,7 @@ Voici comment se passe le premier *passage*.
 
 Comme on peut le voir, l'algorithme compare à chaque fois des éléments adjacents et les échange s'ils ne sont pas dans l'ordre. À la fin de ce premier passage, l'élément le plus grand du tableau (ici l'élément 5) se retrouve à la fin du tableau à sa position définitive. Le tableau n'est cependant pas encore complètement trié et nous devons donc continuer par un nouveau passage. Lors de ce nouveau passage on peut ignorer la dernière case du tableau, car celle-ci contient déjà l'élément le plus grand et ne nécessite donc pas d'être traitée à nouveau.  
 
-~~~python
+~~~rust
 [1, 2, 4, 3, 5] # On compare 1 et 2 et on ne fait rien.
 [1, 2, 4, 3, 5] # On compare 2 et 4 et on ne fait rien.
 [1, 2, 4, 3, 5] # On compare 4 et 3 et on les inverse.
@@ -43,7 +43,7 @@ Tri-Bulles(T)
 
 **:**{:.exercise} 
 
-* Implémentez cette version de l'algorithme en Python et testez-là en lui donnant en entrée une liste aléatoire de nombres entiers. Pour générer une liste `L` de `t` nombres entiers aléatoires compris dans l'interval `[a, b[`on peut écrire :
+* Implémentez cette version de l'algorithme en Rust et testez-là en lui donnant en entrée une liste aléatoire de nombres entiers. Pour générer une liste `L` de `t` nombres entiers aléatoires compris dans l'interval `[a, b[`on peut écrire :
 
 ~~~rust
 L = random.sample(range(a, b), t)
@@ -78,7 +78,7 @@ Le tableau est alors divisé en deux parties : la partie gauche avec les éléme
 
 Voici un exemple du fonctionnement de l'algorithme sur le tableau `[10, 9, 5, 7, 3]`.
 
-~~~python
+~~~rust
 [10, 9, 5, 7, 3]    # Tableau à trier
 [3,| 9, 5, 7, 10]   # 3 est le plus petit élément. On l'échange avec 10. Sous-tableau gauche trié : [3]
 [3, 5,| 9, 7, 10]   # On échange 5 avec 9. Sous-tableau gauche trié : [3,5]
@@ -89,7 +89,7 @@ Voici un exemple du fonctionnement de l'algorithme sur le tableau `[10, 9, 5, 7,
 
 **:**{:.exercise} 
 
-* Faites un pseudo-code pour cet algorithme et implementez-le ensuite en Python. 
+* Faites un pseudo-code pour cet algorithme et implementez-le ensuite en Rust. 
 
 * Quelle est la complexité de cet algorithme dans le pire cas ?
 
@@ -106,7 +106,7 @@ Le tri fusion se base sur le principe diviser pour régner.
 
 * Appliquez le tri fusion *à la main* pour trier le tableau `[5, 2, 4, 7, 1, 3, 2, 6]`.
 
-* Implémentez en Python le tri fusion vu en cours et testez-le sur un tableau de taille 1000 contenant des nombres aléatoires de 0  à 10000.
+* Implémentez en Rust le tri fusion vu en cours et testez-le sur un tableau de taille 1000 contenant des nombres aléatoires de 0  à 10000.
 
 * Comparez en pratique son temps d'exécution aux autres algorithmes de tri implementés précédemment.
 
