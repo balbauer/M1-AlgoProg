@@ -20,6 +20,17 @@ projet/src:
 main.rs
 ~~~
 
+Le fichier de code sur lequel on va à présent travailler est `src/main.rs` (c'est à dire le fichier `main.rs` dans le dossier `src`). Et au lieu d'utiliser d'utiliser `rustc` pour compiler, on lancera `cargo build` dans le dossier `projet`.
+~~~bash
+>>> cd projet
+>>> cargo build
+~~~
+Le fichier binaire construit est `target/debug/projet` (c'est à dire, c'est le fichier projet qui se trouve dans le dossier `debug` lui même qui est dans le dossier `target`). On l'execute de la manière traditionelle.
+~~~bash
+>>> ./target/debug/projet
+~~~
+
+
 ## Tri à bulles (bubble sort)
 
 Le *tri à bulles* est un algorithme de tri très simple dont le principe est de faire remonter à chaque étape le plus grand élément du tableau à trier, comme les bulles d'air remontent à la surface de l'eau (d'où le nom de l'algorithme).
