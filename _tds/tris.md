@@ -43,16 +43,16 @@ Tri-Bulles(T)
 
 **:**{:.exercise} 
 
-* Implémentez cette version de l'algorithme en Python et testez-là en lui donnant en entrée une liste aléatoire de nombres entiers. Pour générer une liste `L` de `t` nombres entiers aléatoires compris dans l'interval `[a, b)`on peut écrire :
+* Implémentez cette version de l'algorithme en Python et testez-là en lui donnant en entrée une liste aléatoire de nombres entiers. Pour générer une liste `L` de `t` nombres entiers aléatoires compris dans l'interval `[a, b[`on peut écrire :
 
-~~~python
+~~~rust
 L = random.sample(range(a, b), t)
 ~~~
 
-Par exemple, pour générer une liste de 10 entiers compris entre 0 et 99 il suffit d'écrire :
+Par exemple, pour générer untableau de 10 entiers compris entre 0 et 99 il suffit d'écrire :
 
-~~~python
->>> import random
+~~~rust
+use rand::prelude::*;
 >>> L = random.sample(range(0, 100), 10)
 >>> L
 [41, 21, 38, 20, 69, 14, 10, 50, 76, 9]
