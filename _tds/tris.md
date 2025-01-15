@@ -97,12 +97,12 @@ Le tableau est alors divisé en deux parties : la partie gauche avec les éléme
 Voici un exemple du fonctionnement de l'algorithme sur le tableau `[10, 9, 5, 7, 3]`.
 
 ~~~rust
-[10, 9, 5, 7, 3]    # Tableau à trier
-[3,| 9, 5, 7, 10]   # 3 est le plus petit élément. On l'échange avec 10. Sous-tableau gauche trié : [3]
-[3, 5,| 9, 7, 10]   # On échange 5 avec 9. Sous-tableau gauche trié : [3,5]
-[3, 5, 7,| 9, 10]   # On échange 7 avec 9. Sous-tableau gauche trié : [3,5,7] 
-[3, 5, 7, 9,| 10]   # Sous-tableau gauche trié : [3,5,7,9] 
-[3, 5, 7, 9, 10]    # Sous-tableau gauche trié : [3,5,7,9,10]. Fin. 
+[10, 9, 5, 7, 3]    \\ Tableau à trier
+[3,| 9, 5, 7, 10]   \\ 3 est le plus petit élément. On l'échange avec 10. Sous-tableau gauche trié : [3]
+[3, 5,| 9, 7, 10]   \\ On échange 5 avec 9. Sous-tableau gauche trié : [3,5]
+[3, 5, 7,| 9, 10]   \\ On échange 7 avec 9. Sous-tableau gauche trié : [3,5,7] 
+[3, 5, 7, 9,| 10]   \\ Sous-tableau gauche trié : [3,5,7,9] 
+[3, 5, 7, 9, 10]    \\ Sous-tableau gauche trié : [3,5,7,9,10]. Fin. 
 ~~~
 
 **:**{:.exercise} 
