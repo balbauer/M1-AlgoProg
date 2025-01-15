@@ -48,7 +48,7 @@ let n = fastrand::i32(a..b);
 
 Le *tri à bulles* est un algorithme de tri très simple dont le principe est de faire remonter à chaque étape le plus grand élément du tableau à trier, comme les bulles d'air remontent à la surface de l'eau (d'où le nom de l'algorithme).
 
-Commençons par un exemple du fonctionnement de l'algorithme. Supposons qu'on souhaite trier la suite de nombres $[5, 1, 2, 4, 3].$
+Commençons par un exemple du fonctionnement de l'algorithme. Supposons qu'on souhaite trier la suite de nombres $$[5, 1, 2, 4, 3].$$
 
 Voici comment se passe le premier *passage*.
 
