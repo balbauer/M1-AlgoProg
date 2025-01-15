@@ -57,7 +57,7 @@ n = 6;
 On peut affecter une valeur à **plusieurs variables simultanément**. 
 
 ~~~rust
-let (x, y, z) = (1, 2.0, "Hello");
+let (x, y, z) = (1, 2.0, "Bonjour");
 ~~~
 
 A noter que dans le cas où la variable est inutilisé, on peut la préfixer par un '`_`' pour ne pas avoir d'avertissement de la part du compilateur.
@@ -65,12 +65,12 @@ A noter que dans le cas où la variable est inutilisé, on peut la préfixer par
 On peut indiquer de quel type est la variable qu'on a déclaré.
 
 
-Si en Rust il n'est pas nécessaire d'écrire des lignes de code spécifiques pour définir le type des variables avant de pouvoir les utiliser, c'est une bonne habitude d'indiquer le type des variables qu'on utilise au moment de leur création afin de faciliter le deboggage. Il suffit d'assigner une valeur à un nom de variable pour que celle-ci soit automatiquement créée avec le type qui correspond à la valeur fournie. On dit alors que Rust est un langage à **typage statique**, contrairement aux langages à **typage dynamique** comme c'est le cas de Python. On peut vérifier ceci avec l'opérateur `type`.
+Si en Rust il n'est pas nécessaire d'écrire des lignes de code spécifiques pour définir le type des variables avant de pouvoir les utiliser, c'est une bonne habitude d'indiquer le type des variables qu'on utilise au moment de leur création afin de faciliter le deboggage, même si il suffit d'assigner une valeur à un nom de variable pour que celle-ci soit automatiquement créée avec le type qui correspond à la valeur fournie. On dit alors que Rust est un langage à **typage statique**, contrairement aux langages à **typage dynamique** comme c'est le cas de Python. On peut vérifier ceci avec l'opérateur `type`.
 
 
 ~~~rust
 let n:i32 = 5;
-let _message:&str = 'Bonjour';
+let _message:&str = "Bonjour";
 let _pi:f32 = 3.14;
 let b:bool = true;
 ~~~
