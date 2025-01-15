@@ -42,7 +42,7 @@ Le mot clef '`let`' et le signe '`=`' est utilisé afin d'affecter une valeur à
 
 ~~~rust
 let n = 5;
-let message = 'Bonjour';
+let message = "Bonjour";
 let pi = 3.14;
 let b = true;
 ~~~
