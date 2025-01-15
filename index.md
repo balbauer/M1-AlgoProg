@@ -4,7 +4,7 @@ title: Home
 
 ## Info pratiques
 
-Cours & TD le mercredi de 13h50 à 17h00, salle G107 Bâtiment Sophie Germain 
+Cours & TD le mercredi de 13h50 à 17h00, salle G207 Bâtiment Sophie Germain 
 
 **Chargés de cours et TD :** Balthazar Bauer
 
@@ -24,7 +24,7 @@ Cours & TD le mercredi de 13h50 à 17h00, salle G107 Bâtiment Sophie Germain
 
 
 
-#### 8 février Kahina Bouchama
+#### 5 février
 
 **Algorithmes de tri**
    - Complexité asymptotique, notation $$\mathcal{\Theta}$$ et $$\mathcal{O}$$
@@ -33,7 +33,7 @@ Cours & TD le mercredi de 13h50 à 17h00, salle G107 Bâtiment Sophie Germain
    
    **TD :** [Algorithmes de tri](tds/tris)
    
-#### 15 février Kahina Bouchama
+#### 12 février
    
 **Structures de données**
   - Listes chaînées
@@ -43,7 +43,7 @@ Cours & TD le mercredi de 13h50 à 17h00, salle G107 Bâtiment Sophie Germain
   **TD :** [Structures de données](tds/structures-donnees)
 
 
-#### 22 février Yann Rotella
+#### 17 février
 
 **Arbres**
    - Arbres binaires de recherche
@@ -51,7 +51,7 @@ Cours & TD le mercredi de 13h50 à 17h00, salle G107 Bâtiment Sophie Germain
 **TD :** [Arbres](tds/classes-arbres)
 
 
-#### 8 mars Yann Rotella
+#### 24 février
 
 **Programmation dynamique**
    - Exponentiation rapide
