@@ -71,7 +71,7 @@ Comme on peut le voir, l'algorithme compare à chaque fois des éléments adjace
 
 On recommence par faire un nouveau passage pour les 3 premières cases du tableau qui ne sont potentiellement pas encore dans l'ordre.
 
-Voici le pseudo-code du tri à bulles (version non-optimisée), où $$n$$ est la longueur du tableau T à trier.
+Voici le pseudo-code du tri à bulles (version non-optimisée), où `n` est la longueur du tableau T à trier.
 
 ~~~
 Tri-Bulles(T)
@@ -83,7 +83,7 @@ Tri-Bulles(T)
 
 **:**{:.exercise} 
 
-* Implémentez cette version de l'algorithme en Rust et testez-là en lui donnant en entrée une liste aléatoire de nombres entiers.
+* Implémentez cette version de l'algorithme en Rust et testez-là en lui donnant en entrée un tableau aléatoire de nombres entiers en utilisant la fonction `tableaualeatoire(taille,a,b)`.
 
 * Pourquoi la version de l'algorithme que vous venez d'implémenter n'est pas optimale ? Pour répondre à cette question, on peut remarquer que dans l'exemple précédent le tableau est déjà trié après seulement le deuxième passage. Dans ce cas, a-t-on besoin d'exécuter l'algorithme jusqu'à la fin ?
 
