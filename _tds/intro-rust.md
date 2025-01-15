@@ -47,7 +47,7 @@ let pi = 3.14;
 let b = true;
 ~~~
 
-Dans le cas où une variable à vocation à être modifié, on rajoutera le mot-clef '`mut`' au moment de sa définition.
+Dans le cas où une variable à vocation à être modifié, on rajoutera le mot-clef '`mut`' au moment de sa définition. Anoter qu'on ne peut pas changer le type de la variable, mais seulement sa valeur.
 
 ~~~rust
 let mut n = 5;
@@ -84,6 +84,7 @@ print!("toto a {} ans.", n);
 ~~~
 
 On remarque que la deuxième méthode (c'est à dire `print!("toto a {} ans.", n);`) est plus robuste que la première (`print!("toto a {n} ans.");`) si l'on doit mettre autre chose qu'un nom de variable en entrée. On notera aussi la variante `println` qui fait automatiquement un passage à la ligne à la fin de l'affichage.
+Vous trouverez plus d'informations sur les fonctions d'affichage en Rust ici : [rust-book-fr](https://doc.rust-lang.org/rust-by-example/hello/print.html).
 
 * **Opérations arithmétiques sur les entiers et les flotants**
 On peut utiliser les opérations usuels `+-*/` aussi bien sur les entiers que les flotants. A noter que `\` est une division euclidienne dans un contexte discret, et s'interprête comme la division usuelle. On peut également utiliser `%` dans le contexte discret, ce qui correspond au modulo anglo-saxon.
@@ -242,9 +243,9 @@ On peut accéder au contenu d'une case grâce aux crochets.
 let tableau_toto = ["toto";100] ;
 let u = tableau_toto[99];
 ~~~
-Et si le tableau est mutable, on peut modifier les cases de ce tableau :
+Et si le tableau est mutable, on peut modifier les cases de ce tableau (mais pas sa taille qui est dépendante du type) :
 ~~rust
-let mut tableau_toto = ["toto";100] ;
+let mut tableau_toto :[; 100] = ["toto";100] ;
 let tableau_toto[99]= "joujou" ;
 ~~~
 ## Listes
