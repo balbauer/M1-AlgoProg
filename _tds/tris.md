@@ -1,7 +1,7 @@
 ---
 title: Implémentation des algorithmes de tri en Rust
 ---
-## Projet et bibliothèque en Rust
+## Projets et bibliothèques en Rust
 
 Dans ce chapitre, nous allons apprendre à créer un projet, ce qui va nous permettre d'utiliser des bibliothèques dans notre programme.
 Pour commencer
@@ -84,7 +84,7 @@ Tri-Bulles(T)
 
 **:**{:.exercise} 
 
-* Implémentez cette version de l'algorithme en Rust et testez-là en lui donnant en entrée un tableau aléatoire de nombres entiers en utilisant la fonction `tableaualeatoire(taille,a,b)`.
+* Implémentez cette version de l'algorithme en Rust et testez-là en lui donnant en entrée un tableau aléatoire de nombres entiers en utilisant la fonction `tableaualeatoire` implémentée dans l'exercice précédent.
 
 * Pourquoi la version de l'algorithme que vous venez d'implémenter n'est pas optimale? Pour répondre à cette question, on peut remarquer que dans l'exemple précédent le tableau est déjà trié après seulement le deuxième passage. Dans ce cas, a-t-on besoin d'exécuter l'algorithme jusqu'à la fin?
 
@@ -92,7 +92,7 @@ Tri-Bulles(T)
 
 * Quel est le temps d'exécution de cet algorithme dans le cas le plus défavorable? Et dans le cas le plus favorable?
 
-* Calculez en pratique le temps d'exécution de vos deux tris (version naïve et version optimisée). Pour cela, peut utiliser la fonction `Instant:now()` de la manière suivante débutez le compteur en insérant l'instruction `debut = time.time()` et arrêtez-le avec l'instruction `let now = std::time::Instant::now();`. Imprimez le temps en secondes écoulé en écrivant `print("{}", now.elapsed().as_secs())`. Afin de pouvoir observer la différence de temps entre les deux implémentations, générez des tableaux de taille très grande (par exemple de taille 50000). 
+* Calculez en pratique le temps d'exécution de vos deux tris (version naïve et version optimisée). Pour cela, peut utiliser la fonction `Instant:now()` de la manière suivante débutez le compteur en insérant l'instruction `let now = std::time::Instant::now();`. Imprimez le temps écoulé en secondes en écrivant `print("{}", now.elapsed().as_secs())`. Afin de pouvoir observer significativement la différence de temps entre les deux implémentations, générez des tableaux de taille très grande (par exemple de taille 50000). 
 
 
 ## Tri par sélection (selection sort)
