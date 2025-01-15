@@ -258,9 +258,7 @@ let taille = tableau.len() ;
 
 **:**{:.exercise}
 
-Définissez le tableau `tableau = [34, 0, -17, 5, 18, 9]`, puis effectuez les actions suivantes :
-
-- Triez et affichez le tableau.
+Définissez le tableau `tableau = [34, 0, -17, 5, 18, 9]`, puis triez et affichez le tableau.
 
 **:**{:.exercise}
 
