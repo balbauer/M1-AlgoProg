@@ -20,7 +20,7 @@ projet/src:
 main.rs
 ~~~
 
-Le fichier de code sur lequel on va à présent travailler est `src/main.rs` (c'est à dire le fichier `main.rs` dans le dossier `src`). Et au lieu d'utiliser d'utiliser `rustc` pour compiler, on lancera `cargo build` dans le dossier `projet`.
+Le fichier de code sur lequel on va à présent travailler est `src/main.rs` (c'est à dire le fichier `main.rs` dans le dossier `src`). Et au lieu d'utiliser `rustc` pour compiler, on lancera `cargo build` dans le dossier `projet`.
 ~~~bash
 >>> cd projet
 >>> cargo build
@@ -30,6 +30,19 @@ Le fichier binaire construit est `target/debug/projet` (c'est à dire, c'est le 
 >>> ./target/debug/projet
 ~~~
 
+On peut ajouter de nouvelles bibliothèques à notre projet avec `cargo add`. Par exemple, pour ajouter la bibliothèque `fastrand` qui nous permet d'utiliser de l'aléa, on lancera:
+
+~~~bash
+>>> cargo add fastrand
+~~~
+
+## Premières manipulations de la bibliothèque `fastrand`
+**:**{:.exercise} 
+On va commencer par créer une fonction `tableaualeatoire(taille,a,b)` qui génère une tableau de taille `taille` où les entiers sont tirés uniformément dans l'intervalle `[a; b[`. Pour générer un entier `n` un nombre entier aléatoire compris dans l'intervalle `[a; b[`on peut écrire :
+
+~~~rust
+let n = fastrand::i32(a..b);
+~~~
 
 ## Tri à bulles (bubble sort)
 
@@ -72,20 +85,7 @@ Tri-Bulles(T)
 
 **:**{:.exercise} 
 
-* Implémentez cette version de l'algorithme en Rust et testez-là en lui donnant en entrée une liste aléatoire de nombres entiers. Pour générer une liste `L` de `t` nombres entiers aléatoires compris dans l'interval `[a, b[`on peut écrire :
-
-~~~rust
-L = random.sample(range(a, b), t)
-~~~
-
-Par exemple, pour générer untableau de 10 entiers compris entre 0 et 99 il suffit d'écrire :
-
-~~~rust
-use rand::prelude::*;
->>> L = random.sample(range(0, 100), 10)
->>> L
-[41, 21, 38, 20, 69, 14, 10, 50, 76, 9]
-~~~
+* Implémentez cette version de l'algorithme en Rust et testez-là en lui donnant en entrée une liste aléatoire de nombres entiers.
 
 * Pourquoi la version de l'algorithme que vous venez d'implémenter n'est pas optimale ? Pour répondre à cette question, on peut remarquer que dans l'exemple précédent le tableau est déjà trié après seulement le deuxième passage. Dans ce cas, a-t-on besoin d'exécuter l'algorithme jusqu'à la fin ?
 
