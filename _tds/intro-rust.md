@@ -243,6 +243,7 @@ On peut accéder au contenu d'une case grâce aux crochets.
 let tableau_toto = ["toto";100] ;
 let u = tableau_toto[99];
 ~~~
+
 Et si le tableau est mutable, on peut modifier les cases de ce tableau (mais pas sa taille qui est dépendante du type) :
 ~~~rust
 let mut tableau_toto :[&str; 100] = ["toto";100] ;
