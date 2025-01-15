@@ -195,11 +195,11 @@ Voici une fonction qui imprime les `n` premiers termes  de la suite *Fibonacci*.
 ~~~rust
 fn fibonacci(n:i32) {
  let mut fin:i32 = 1 ;
- let mut fnplusun:i32 = 1;
+ let mut finplusun:i32 = 1;
  for _i in 1..n {
         print! ("{fin}\n");
-        let a:i32 = fnplusun;
-        fnplusun = fin + fnplusun;
+        let a:i32 = finplusun;
+        finplusun = fin + finplusun;
         fin =a;
  }
 }
