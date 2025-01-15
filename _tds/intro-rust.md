@@ -249,191 +249,26 @@ Et si le tableau est modifiable (avec le mot-clef `mut`), on peut modifier les c
 let mut tableau_toto :[&str; 100] = ["toto";100] ;
 let tableau_toto[99]= "joujou" ;
 ~~~
-## Listes
 
-Les listes sont des structures ordonnées de données. En Python, une liste est définie à l'aide des crochets.
-
-~~~python
-nombres = [2,5,13,-35,0]
-fromages = ['roquefort', 'camembert', 'saint-nectaire', 'comté']
-~~~
-
-On peut accéder aux données d'une liste à l'aide de leur indice associé.
-
-~~~python
->>> print(nombres[2])
-13
->>> print(fromages[0])
-roquefort
->>> print(fromages[-1])
-comté
->>> print(nombres[0:3])
-[2, 5, 13]
-~~~
-
-On peut accéder à la taille d'une liste à l'aide de la fonction `len()`. Elle renvoie le nombre d'éléments présents dans la liste.
-
-~~~python
->>> len(nombres)
-5
->>> len(fromages)
-4
-~~~
-
-Il existe plusieurs manières de créer une liste. Voici quelques unes :
-
-* Liste vide
-
-~~~python
->>> liste = []
-~~~
-
-* On peut créer une liste en indiquant à la création les éléments qu'elle doit contenir. Vous pouvez remarquer qu'une liste peut contenir d'éléments ayant des types variés.
-
-~~~python
->>> liste = ['ac/dc', 42, 3.14]
-~~~
-
-* La syntaxe des *compréhensions de listes* permet de générer une liste par une boucle.
-
-~~~python
->>> liste = [i for i in range(20)]
->>> print(liste)
-[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
-~~~
-
-* Liste contenant le carré de tous les entiers de 0 à 9.
-
-~~~python
->>> liste = [i ** 2 for i in range(10)]
->>> print(liste)
-[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
-~~~
-
-On peut parcourir une liste à l'aide d'une boucle `for`,
-
-~~~python
->>> nombres = [9, 13, -2, 25, 31, 7, 4]
->>> sum = 0
->>> for i in nombres:
-...     sum += i
->>> print(sum)
-87
-~~~
-
-où à l'aide d'une boucle `while`.
-
-~~~python
->>> i = 0
->>> sum = 0
->>> while i < len(nombres):
-...     sum += i
-...     i += 3
->>> print(sum)
-9
-~~~
-
-On peut tester si un élément est dans la liste à l'aide de l'instruction `in`.
-
-~~~python
->>> print(-2 in nombres) 
-True
->>> print(8 in nombres) 
-False
-~~~
-
-Les listes sont des objets (comme tout autre type en Python). Il existe plusieurs méthodes déjà définies pour la classe `list` de Python, qu'on peut utiliser pour nos listes. Pour utiliser une méthode sur une liste, on écrit le nom de la liste, suivi d'un '`.`', suivi du nom de la méthode. 
-
-Voici quelques méthodes qui peuvent vous  être utiles.
-
-* La méthode `append(x)` qui permet d'ajouter un élément `x` à la fin d'une liste.
-
-~~~python
->>> liste = [0, 3, 1, 5.0, 6, 4.3]
->>> liste.append(7)
->>> print(liste)
-[0, 3, 1, 5.0, 6, 4.3, 7]
-~~~
-
-* La méthode `insert(index,x)`qui insère l'élément `x` à la position `index` de la liste.
-
-~~~python
->>> liste.insert(3, 13.2)
->>> liste
-[0, 3, 1, 13.2, 5.0, 6, 4.3, 7]
-~~~
-
-* La méthode `remove(x)` qui supprime de la liste le premier élément `x` trouvé.
-
-~~~python
->>> liste.remove(13.2)
->>> liste
-[0, 3, 1, 5.0, 6, 4.3, 7]
-~~~
-
-Cette liste des méthodes est loin d'être exhaustive. Vous pouvez trouver plus d'informations sur la page [docs.python.org](https://docs.python.org/3.1/tutorial/datastructures.html).
-
-**Copie d'une liste**: Que fait le code suivant ?
-
-~~~python
-L1 = [1, 2, 3, 4, 5, 6]
-L2 = L1
-print(L2)
-
-L2.append(7)
-print(L2)
-print(L1)
-~~~
-
-En modifiant L2, la liste L1 a été modifiée aussi !
-
-* Il ne faut jamais utiliser l'opérateur `=` pour copier une liste.
-
-* Les deux objets L1 et L2 partagent la même zone mémoire. Une modification de l’un entraine une modification de l’autre.
-
-Toutes les méthodes suivantes sont des manières légitimes de correctement copier une liste :
-
-~~~python
-L1 = [1, 2, 3, 4, 5, 6]
-
-L2 = list(L1)
-L3 = L1.copy()
-L4 = L1[:]
-L5 = [i for i in L1]
+On peut retrouver la taille d'un tableau avec l'atribut `len`.
+~~~rust
+let mut tableau :[&str; 100] = ["toto";100] ;
+let taille = tableau.len() ;
 ~~~
 
 **:**{:.exercise}
 
-Définissez la liste `liste = [34, 0, -17, 5, 18, 9]`, puis effectuez les actions suivantes :
+Définissez le tableau `tableau = [34, 0, -17, 5, 18, 9]`, puis effectuez les actions suivantes :
 
-- Triez et affichez la liste.
-
-- Ajoutez l’élément 15 à la fin de la liste et affichez la.
-
-- Renversez et affichez la liste.
-
-- Affichez l’indice de l’élément -17.
-
-- Enlevez l’élément 5 et affichez la liste.
-
-- Affichez la sous-liste du $$2^e$$ au $$3^e$$ élément.
-
-- Affichez la sous-liste du début au $$4^e$$ élément.
-
-- Affichez la sous-liste du $$3^e$$ élément à la fin de la liste.
-
-- Affichez l'avant dernier élément en utilisant un indiçage négatif.
+- Triez et affichez le tableau.
 
 **:**{:.exercise}
 
-Modifier la fonction `fibonacci(n)` de la Section 5 afin qu'elle renvoie une liste avec les `n` premiers termes de la suite Fibonacci.
+Modifier la fonction `fibonacci(n)` de la Section 5 afin qu'elle renvoie un tableau avec les `n` premiers termes de la suite Fibonacci.
 
 # Exercices
 
-Vous êtes prêts maintenant à écrire par vous mêmes des programmes un peu plus longs et compliqués. Si le notebook est toujours pratique, le mode terminal lui ne l'est plus. L'alternative est d'utiliser des *scripts* pour écrire, sauvegarder et modifier vos programmes. Pour écrire un script il vous suffit de créer un fichier dont le nom se termine par `.py` afin d'indiquer qu'il s'agit bien d'un script Python. Vous pouvez ensuite l'exécuter dans un terminal en écrivant
-~~~
-python3 script.py
-~~~
+Vous êtes prêts maintenant à écrire par vous mêmes des programmes un peu plus longs et compliqués.
 
 ## Crible d'Ératosthène
 
@@ -457,9 +292,9 @@ On peut voir qu'avec cette approche, on réduit à chaque étape la taille de l'
 
 Pour cet exercice, on suppose que l'utilisateur possède une tableau croissante de nombres et on lui fournit un nombre qu'on suppose être dans la tableau. Le but est de retourner l'indice du nombre recherché dans la tableau.
 
-Si la tableau fournie est [1,3,4,6,10,14,15] et l'élément qu'on cherche est 10, alors le programme doit retourner 4 (souvenez-vous que, dans une tableau, les indices sont numérotés à partir de 0).
+Si la tableau fourni est [1,3,4,6,10,14,15] et l'élément qu'on cherche est 10, alors le programme doit retourner 4 (souvenez-vous que, dans une tableau, les indices sont numérotés à partir de 0).
 
-Écrivez une fonction `rechercheDichotomique(valeur, tableauTriee)` qui prend en entrée une tableau triée de nombres et une valeur à rechercher dans la tableau et renvoie l'indice de la tableau correspondant à cette valeur.
+Écrivez une fonction `rechercheDichotomique(valeur, tableauTriee)` qui prend en entrée une tableau trié de nombres et une valeur à rechercher dans la tableau et renvoie l'indice de la tableau correspondant à cette valeur.
 
 
 
