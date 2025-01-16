@@ -330,8 +330,3 @@ Pour cet exercice, on suppose que l'utilisateur possède une tableau croissante 
 Si la tableau fourni est `[1,3,4,6,10,14,15] et l'élément qu'on cherche est 10, alors le programme doit retourner 4 (souvenez-vous que, dans une tableau, les indices sont numérotés à partir de 0).
 
 Écrivez une fonction `recherche_dichotomique(valeur, tableautrie)` qui prend en entrée une tableau trié de nombres et une valeur à rechercher dans la tableau et renvoie l'indice de la tableau correspondant à cette valeur.
-
-
-
-
-
