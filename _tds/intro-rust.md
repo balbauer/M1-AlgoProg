@@ -227,6 +227,18 @@ et affiche à l'écran les `fin` premiers éléments de la  table de multiplicat
 
 Par exemple `table_de_multiplication(3, 10)` doit retourner `0 3 6 9 12 15 18 21 24 27`.
 
+## Références
+
+Par défaut une fonction ne modifiera pas une variable (même si elle est censée être modifiable avec le mot-clef `mut`), car cette dernière copie la donnée prise en entrée, et travaille sur la copie de la donnée sans travailler sur l'original. On peut tester la fonction suivante.
+~~~rust
+let mut n = 5;
+fn succ(mut n:i32){
+ n= n+1;
+}
+print!("{}",n);
+~~~
+On va donc devoir utiliser une stratégie similaire à celle des pointeurs dans le langage C. Si Rust a une gestion des adresses, et des pointeurs similaires à celle de C. Dans ce cours, on priviligiera l'utilisation des références. L'idée est la suivante, au moment où l'on définit la variable, on utilisera le mot-clef `ref`.
+
 ## Tableaux
 
 Les tableaux sont des structures de données où l'accès à une donnée (pour peu qu'on connaisse son adresse) est peu coûteuse, mais dont la taille est définie à la création, et n'a pas vocation à changer.
