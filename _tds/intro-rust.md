@@ -232,9 +232,10 @@ Par exemple `table_de_multiplication(3, 10)` doit retourner `0 3 6 9 12 15 18 21
 Par défaut une fonction ne modifiera pas une variable (même si elle est censée être modifiable avec le mot-clef `mut`), car cette dernière copie la donnée prise en entrée, et travaille sur la copie de la donnée sans travailler sur l'original. On peut tester la fonction suivante.
 ~~~rust
 let mut n = 5;
-fn succ(mut n:i32){
+fn incr(n:i32){
  n= n+1;
 }
+incr(n);
 print!("{}",n);
 ~~~
 On va donc devoir utiliser une stratégie similaire à celle des pointeurs dans le langage C. Si Rust a une gestion des adresses, et des pointeurs similaires à celle de C. Dans ce cours, on priviligiera l'utilisation des références. L'idée est la suivante, au moment où l'on définit la variable, on utilisera le mot-clef `ref`.
@@ -255,12 +256,12 @@ A noter que le type passé en argument d'une fonction censée travailler sur une
 
 ~~~rust
 let ref mut n = 5;
-fn succ(n:&mut i32){
+fn incr(n:&mut i32){
  *n= *n+1;
 }
+incr(n);
 print!("{}",*n);
 ~~~
-
 
 ## Tableaux
 
