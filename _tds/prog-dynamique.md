@@ -49,9 +49,9 @@ Quand on lâche un œuf d'un étage $$x$$, deux cas sont possibles :
 
 Puisque nous cherchons à minimiser le nombre d'essais dans le pire cas, on considère la valeur maximale de ces deux cas et on choisit l'étage qui donne le nombre minimal d'essais.
 
-On note `eggDrop(n,h)` le nombre minimal d'essais pour trouver l'étage critique (celui à partir duquel les œufs se brisent). Cette valeur peut être calculée de façon récursive en utilisant l'équation récursive suivante :
+On note `egg_drop(n,h)` le nombre minimal d'essais pour trouver l'étage critique (celui à partir duquel les œufs se brisent). Cette valeur peut être calculée de façon récursive en utilisant l'équation récursive suivante :
 
-$$\mathtt{eggDrop}(n,h) = 1 + \min_{x \in \{1, \dots h\}} \max(\mathtt{eggDrop}(n-1, x-1), \mathtt{eggDrop}(n, h-x)) $$ 
+$$\mathtt{egg_drop}(n,h) = 1 + \min_{x \in \{1, \dots h\}} \max(\mathtt{egg_drop}(n-1, x-1), \mathtt{egg_drop}(n, h-x)) $$ 
 
 
 **:**{:.exercise} 
