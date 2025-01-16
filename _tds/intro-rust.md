@@ -238,7 +238,7 @@ fn succ(n:i32){
 incr(n);
 print!("{}",n);
 ~~~
-On va donc devoir utiliser une stratégie similaire à celle des pointeurs dans le langage C. Si Rust a une gestion des adresses, et des pointeurs similaires à celle de C. Dans ce cours, on priviligiera l'utilisation des références. L'idée est la suivante, `n` n'est plus vraiment une variable, mais une case-mémoire qui contient un entier modifiable de 64 bits (initialisé à `5`). Le type de cette case est `&mut i32` (comprendre case contenant un entier modifiable de 32 bits). Et pour le définir, on utilisera l'expression '`&mut`' (qui joue le même rôle que le `ref` en ocaml).
+On va donc devoir utiliser une stratégie similaire à celle des pointeurs dans le langage C. Si Rust a une gestion des adresses, et des pointeurs similaires à celle de C. Dans ce cours, on priviligiera l'utilisation des références. L'idée est la suivante, `n` n'est plus vraiment une variable, mais une case-mémoire qui contient un entier modifiable de 64 bits (initialisé à `5`). Le type de cette case est `&mut i32` (comprendre case contenant un entier modifiable de 32 bits). Et pour le définir, on utilisera l'expression '`&mut`' (qui joue le même rôle que le '`ref`' en ocaml).
 
 ~~~rust
 let n : &mut i32= &mut 5;
@@ -251,7 +251,7 @@ let ref mut n = 5;
 print!("{}",*n);
 ~~~
 
-A présent, on peut utiliser une fonction qui va prendre en argument la case mémoire, en faisant attention que le type passé en argument d'une fonction censée travailler sur une référence change (cela devient le type de la case mémoire, c'est à dire `&mut type_dela_donnee_dans_la_case`).
+A présent, on peut utiliser une fonction qui va prendre en argument la case mémoire, en faisant attention que le type passé en argument change (cela devient le type de la case mémoire, c'est à dire `&mut type_dela_donnee_dans_la_case`).
 
 ~~~rust
 let ref mut n = 5;
@@ -279,17 +279,19 @@ let tableau_toto = ["toto";100] ;
 let u = tableau_toto[99];
 ~~~
 
+On peut retrouver la taille d'un tableau avec l'atribut `len`.
+~~~rust
+let tableau :[&str; 100] = ["toto";100] ;
+let taille = tableau.len() ;
+~~~
+
 Et si le tableau est modifiable (avec le mot-clef `mut`), on peut modifier les cases de ce tableau (mais pas sa taille qui est dépendante du type) :
 ~~~rust
 let mut tableau_toto :[&str; 100] = ["toto";100] ;
 let tableau_toto[99]= "joujou" ;
 ~~~
 
-On peut retrouver la taille d'un tableau avec l'atribut `len`.
-~~~rust
-let mut tableau :[&str; 100] = ["toto";100] ;
-let taille = tableau.len() ;
-~~~
+
 
 **:**{:.exercise}
 
