@@ -229,7 +229,7 @@ Par exemple `table_de_multiplication(3, 10)` doit retourner `0 3 6 9 12 15 18 21
 
 ## Références
 
-Par défaut une fonction ne modifiera pas une variable (même si elle est censée être modifiable avec le mot-clef `mut`), car cette dernière copie la donnée prise en entrée, et travaille sur la copie de la donnée sans travailler sur l'original. On peut tester la fonction suivante.
+Par défaut une fonction ne modifiera pas une variable (même si elle est censée être modifiable avec le mot-clef '`mut`'), car cette dernière copie la donnée prise en entrée, et travaille sur la copie de la donnée sans modifier l'original. On peut tester la fonction suivante :
 ~~~rust
 let mut n = 5;
 fn succ(n:i32){
@@ -238,13 +238,13 @@ fn succ(n:i32){
 incr(n);
 print!("{}",n);
 ~~~
-On va donc devoir utiliser une stratégie similaire à celle des pointeurs dans le langage C. Si Rust a une gestion des adresses, et des pointeurs similaires à celle de C. Dans ce cours, on priviligiera l'utilisation des références. L'idée est la suivante, `n` n'est plus vraiment une variable, mais une case-mémoire qui contient un entier modifiable de 64 bits (initialisé à `5`). Le type de cette case est `&mut i32` (comprendre case contenant un entier modifiable de 32 bits). Et pour le définir, on utilisera l'expression `&mut` (qui joue le même rôle que le `ref` en ocaml).
+On va donc devoir utiliser une stratégie similaire à celle des pointeurs dans le langage C. Si Rust a une gestion des adresses, et des pointeurs similaires à celle de C. Dans ce cours, on priviligiera l'utilisation des références. L'idée est la suivante, `n` n'est plus vraiment une variable, mais une case-mémoire qui contient un entier modifiable de 64 bits (initialisé à `5`). Le type de cette case est `&mut i32` (comprendre case contenant un entier modifiable de 32 bits). Et pour le définir, on utilisera l'expression '`&mut`' (qui joue le même rôle que le `ref` en ocaml).
 
 ~~~rust
 let n : &mut i32= &mut 5;
 ~~~
 
-Pour accéder à la valeur de la case mémoire (que ça soit pour lire la valeur ou réécrire dessus), on utilisera `*n` (Similaire au langage C, et analogue au `!` du Ocaml).
+Pour accéder à la valeur de la case mémoire (que ça soit pour lire la valeur ou réécrire dessus), on utilisera '`*n`' (Similaire au langage C, et analogue au '`!`' du Ocaml).
 ~~~rust
 let ref mut n = 5;
 *n= *n+1;
