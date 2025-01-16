@@ -239,6 +239,29 @@ print!("{}",n);
 ~~~
 On va donc devoir utiliser une stratégie similaire à celle des pointeurs dans le langage C. Si Rust a une gestion des adresses, et des pointeurs similaires à celle de C. Dans ce cours, on priviligiera l'utilisation des références. L'idée est la suivante, au moment où l'on définit la variable, on utilisera le mot-clef `ref`.
 
+~~~rust
+let ref mut n : i64= 5;
+~~~
+
+Ici `n` n'est plus vraiment une variable, mais une case-mémoire qui contient un entier de 64 bits (initialisé à `5`). Pour accéder à la valeur de la case mémoire (que ça soit pour lire la valeur ou réécrire dessus), on utilisera `*n`.
+
+~~~rust
+let ref mut n = 5;
+*n= *n+1;
+print!("{}",*n);
+~~~
+
+A noter que le type passé en argument d'une fonction censée travailler sur une référence change (cela devient le type de la case mémoire, c'est à dire `&mut type_dela_donnee_dans_la_case`).
+
+~~~rust
+let ref mut n = 5;
+fn succ(n:&mut i32){
+ *n= *n+1;
+}
+print!("{}",*n);
+~~~
+
+
 ## Tableaux
 
 Les tableaux sont des structures de données où l'accès à une donnée (pour peu qu'on connaisse son adresse) est peu coûteuse, mais dont la taille est définie à la création, et n'a pas vocation à changer.
