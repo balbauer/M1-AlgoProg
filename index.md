@@ -6,7 +6,7 @@ title: Home
 
 Cours & TD le mercredi de 13h50 à 17h00, salle G207 Bâtiment Sophie Germain 
 
-**Chargés de cours et TD :** Balthazar Bauer
+**Chargé de cours et TD :** Balthazar Bauer
 
 <!--**Serveur pour les TPs:** [https://jupyter.ens.uvsq.fr/](https://jupyter.ens.uvsq.fr/)-->
 
