@@ -1,8 +1,8 @@
 ---
-title: Structures de données en Python
+title: Structures de données en Rust
 ---
 
-## Les chaînes de caractère en Python
+## Les chaînes de caractère en Rust
 
 Avant de commencer les exercices, voici quelques mots sur les chaînes de caractères en Python dont vous aurez besoin tout au long de cette séance.
 
