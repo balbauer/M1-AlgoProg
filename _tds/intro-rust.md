@@ -65,8 +65,7 @@ A noter que dans le cas où la variable est inutilisé, on peut la préfixer par
 On peut indiquer de quel type est la variable qu'on a déclaré.
 
 
-Si en Rust il n'est pas nécessaire d'écrire des lignes de code spécifiques pour définir le type des variables avant de pouvoir les utiliser, c'est une bonne habitude d'indiquer le type des variables qu'on utilise au moment de leur création afin de faciliter le deboggage, même si il suffit d'assigner une valeur à un nom de variable pour que celle-ci soit automatiquement créée avec le type qui correspond à la valeur fournie. On dit alors que Rust est un langage à **typage statique**, contrairement aux langages à **typage dynamique** comme c'est le cas de Python. On peut vérifier ceci avec l'opérateur `type`.
-
+Si en Rust il n'est pas nécessaire d'écrire des lignes de code spécifiques pour définir le type des variables avant de pouvoir les utiliser, c'est une bonne habitude d'indiquer le type des variables qu'on utilise au moment de leur création afin de faciliter le deboggage, même si il suffit d'assigner une valeur à un nom de variable pour que celle-ci soit automatiquement créée avec le type qui correspond à la valeur fournie. On dit alors que Rust est un langage à **typage statique**, contrairement aux langages à **typage dynamique** comme c'est le cas de Python.
 
 ~~~rust
 let n:i32 = 5;
@@ -246,7 +245,7 @@ let n : &mut i32= &mut 5;
 
 Pour accéder à la valeur de la case mémoire (que ça soit pour lire la valeur ou réécrire dessus), on utilisera '`*n`' (Similaire au langage C, et analogue au '`!`' du Ocaml).
 ~~~rust
-let ref mut n = 5;
+let mut n = &mut 5;
 *n= *n+1;
 print!("{}",*n);
 ~~~
@@ -254,7 +253,7 @@ print!("{}",*n);
 A présent, on peut utiliser une fonction qui va prendre en argument la case mémoire, en faisant attention que le type passé en argument change (cela devient le type de la case mémoire, c'est à dire `&mut type_dela_donnee_dans_la_case`).
 
 ~~~rust
-let ref mut n = 5;
+let mut n = &mut 5;
 fn succ(n:&mut i32){
  *n= *n+1;
 }
@@ -278,6 +277,8 @@ On peut accéder au contenu d'une case grâce aux crochets.
 let tableau_toto = ["toto";100] ;
 let u = tableau_toto[99];
 ~~~
+
+Ainsi avec le code ci-dessus, `u` prend la valeur de la dernière case de `tableau_toto` (on rappelle que dans la plupart des langages de programmation, les tableaux sont indicés à partir de zéro).
 
 On peut retrouver la taille d'un tableau avec l'atribut `len`.
 ~~~rust
