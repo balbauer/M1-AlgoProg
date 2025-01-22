@@ -1,26 +1,26 @@
 ---
-title: Les classes en Python / Arbres
+title: Les classes en Rust / Arbres
 ---
 
 ## Les classes
 
-Python est un langage orienté-objet. Dans ce type de langage, absolument tout est objet : une chaîne de caractères, un entier, une liste, un dictionnaire, ou encore une fonction. Un **objet** est une entité qu'on crée par *instantiation* à partir d'une classe. Une **classe** est un type permettant de regrouper dans la même structure les *informations* (champs, propriétés, attributs) relatives à une entité ainsi que les *fonctions*, qu'on appelle **méthodes** permettant de les manipuler. Les champs et les méthodes constituent les *membres* de la classe.
+Rust est un langage qui épouse certains paradigme de l'orienté-objet. Un **objet** est une entité qu'on crée par *instantiation* à partir d'une classe. Une **classe** est un type permettant de regrouper dans la même structure les *informations* (champs, propriétés, attributs) relatives à une entité ainsi que les *fonctions*, qu'on appelle **méthodes** permettant de les manipuler. Les champs et les méthodes constituent les *membres* de la classe.
 
 La création d'un objet se fait en deux étapes. On décrit d'abord à quoi ressemble notre objet et on demande ensuite à l’ordinateur d’utiliser cette description pour le fabriquer. Créons une classe `Etudiant`.
 
-~~~python
->>> class Etudiant :
-...     def __init__(self, nom, prenom, numero_etudiant, age) :
-...         self.nom = nom
-...         self.prenom = prenom
-...         self.numero_etudiant = numero_etudiant
-...         self.age = age
+~~~rust
+struct Etudiant {
+    nom: String,
+    prenom : String,
+    numero_etudiant :i64,
+    age : i32
+}
 ~~~
 
 La classe `Etudiant` modélise d'une certaine façon l'entité *étudiant* et décrit ses caractéristiques principales à travers ses *champs*.
 
-* Le mot `class` est un mot-clé utilisé lorsqu'on définit une nouvelle classe.
-* `Etudiant` est le nom de la classe. Par convention, le nom de la classe commence par une lettre majuscule et ne comporte pas d'espaces. On écrit par exemple : `NomDeLaClasse`.
+* Le mot `struct` est un mot-clef utilisé lorsqu'on définit une nouvelle classe.
+* `Etudiant` est le nom de la classe. Par convention, le nom de la classe commence par une lettre majuscule et ne comporte pas d'espaces. On écrit par exemple : `Nomdelaclasse`.
 * `__init__` est une méthode spéciale, appelée **constructeur**, qui permet de construire et personnaliser des objets. Le constructeur, lorsqu'il est appelé, crée et renvoie un objet du type voulu et contenant ce qui est passé en paramètre. Contrairement à d'autres langages orientés-objet, le constructeur en Python porte toujours le même nom.
 * Le mot `self` (soi) fait référence à une instance de la classe (celle que nous sommes en train de créer ou de manipuler). C'est l'équivalent de `this` en Java ou d'autres langages.
 * Notre classe `Etudiant` comporte quatre attributs ou champs. À la création d'un nouvel objet, on initialise ses champs  à l'aide des valeurs qu'on passe comme arguments au constructeur.
