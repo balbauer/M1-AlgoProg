@@ -43,7 +43,7 @@ Cours & TD le mercredi de 13h50 à 17h00, salle G207 Bâtiment Sophie Germain
   **TD :** [Structures de données](tds/structures-donnees)
 
 
-#### 17 février
+#### 19 février
 
 **Arbres**
    - Arbres binaires de recherche
@@ -60,11 +60,11 @@ Cours & TD le mercredi de 13h50 à 17h00, salle G207 Bâtiment Sophie Germain
     
 **TD :** [Programmation dynamique](tds/prog-dynamique)
 
-#### 15 mars Yann Rotella
+#### 15 mars
 
 **1er contrôle continu**
 
-#### 22 mars Kahina Bouchama
+#### 22 mars
 
 **Programmation linéaire**
     - Algorithme du simplexe
@@ -72,7 +72,7 @@ Cours & TD le mercredi de 13h50 à 17h00, salle G207 Bâtiment Sophie Germain
 **TD :** [Programmation linéaire](tds/linprog)
 
 
-#### 29 mars Kahina Bouchama
+#### 29 mars
 
 **Heuristiques**
     - Algorithmes probabilistes
@@ -94,20 +94,20 @@ Cours & TD le mercredi de 13h50 à 17h00, salle G207 Bâtiment Sophie Germain
 - Arbre couvrant minimum
 - Preuves en exercice
 
-#### 12 avril Yann Rotella
+#### 12 avril
 
 **Graphes (2)**
 
 **TD :** [Graphes](tds/graphes)
 
 
-#### 19 avril Yann Rotella
+#### 19 avril
 
 **Problèmes NP complets, machines de Turing**
 
 
 
-#### 26 avril Kahina Bouchama
+#### 26 avril
 
 **Second et dernier CC**
 
