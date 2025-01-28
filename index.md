@@ -6,7 +6,7 @@ title: Home
 
 Cours & TD le mercredi de 13h50 à 17h00, salle G207 Bâtiment Sophie Germain 
 
-**Chargé de cours et TD :** Balthazar Bauer
+**Chargé de cours et TP :** Balthazar Bauer
 
 <!--**Serveur pour les TPs:** [https://jupyter.ens.uvsq.fr/](https://jupyter.ens.uvsq.fr/)-->
 
@@ -51,7 +51,7 @@ Cours & TD le mercredi de 13h50 à 17h00, salle G207 Bâtiment Sophie Germain
 **TD :** [Arbres](tds/classes-arbres)
 
 
-#### 24 février
+#### 26 février
 
 **Programmation dynamique**
    - Exponentiation rapide
@@ -59,77 +59,6 @@ Cours & TD le mercredi de 13h50 à 17h00, salle G207 Bâtiment Sophie Germain
     
     
 **TD :** [Programmation dynamique](tds/prog-dynamique)
-
-#### 15 mars
-
-**1er contrôle continu**
-
-#### 22 mars
-
-**Programmation linéaire**
-    - Algorithme du simplexe
-    
-**TD :** [Programmation linéaire](tds/linprog)
-
-
-#### 29 mars
-
-**Heuristiques**
-    - Algorithmes probabilistes
-    
-**TD :** [TBA](tds/heuristique)
-
-
-
-#### 5 avril
-
-**Graphes (1)**
-   - Notions de base, représentation, matrice d'adjacence
-   - Parcours en largeur et en profondeur
-   - Tri topologique
-   - Plus court chemins, Dijkstra et Bellman-Ford
-   
-**TD :** [Graphes](tds/graphes)
-- Programmation des algorithmes vus en cours
-- Arbre couvrant minimum
-- Preuves en exercice
-
-#### 12 avril
-
-**Graphes (2)**
-
-**TD :** [Graphes](tds/graphes)
-
-
-#### 19 avril
-
-**Problèmes NP complets, machines de Turing**
-
-
-
-#### 26 avril
-
-**Second et dernier CC**
-
-#### Pour aller plus loin (cours de l'année passée)
-
-**String matching**
-   - Rabin-Karp,
-   - Automates finis
-    
-**TD :** [String matching](tds/strings)
-
-
-
-
-
-## Modalités d'évaluation :
-
-15 mars - 13 h 50 : 1er contrôle continu (sur feuille + machine) : 
-
-26 avril - 13 h 50 : 2nd contrôle continu (sur feuille + machine) :
-
-**Note finale :** 100% CC, où CC = (CC1 + CC2)/2
 
 
 
