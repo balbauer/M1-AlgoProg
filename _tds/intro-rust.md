@@ -322,7 +322,7 @@ Vous pouvez voir une jolie animation de l'exécution de l'algorithme sur la page
 
 **Remarque**. En réalité, il suffit de tester uniquement les multiples des nombres de 2 à $$\sqrt{N}$$, puisque un nombre composé plus petit ou égal à $$N$$, a forcément un facteur plus petit ou égal à $$\sqrt{N}$$.
 
-Vous devez maintenant programmer le crible d'Ératosthène en  Python. Écrivez une fonction `eratosthene(N)` qui prend comme paramètre un entier naturel $$N$$ et qui affiche à l'écran la liste de tous les nombres premiers plus petits ou égaux à $$N$$. Il existe plusieurs façons de coder cet algorithme en Python, vous êtes libres de faire à votre propre guise. 
+Vous devez maintenant programmer le crible d'Ératosthène en Rust. Écrivez une fonction `eratosthene(N)` qui prend comme paramètre un entier naturel $$N$$ et qui affiche à l'écran la liste de tous les nombres premiers plus petits ou égaux à $$N$$. Il existe plusieurs façons de coder cet algorithme en Rust, vous êtes libres de faire à votre propre guise. 
 
 ## Recherche dichotomique
 
