@@ -18,20 +18,20 @@ Cours & TD le mercredi de 13h50 à 17h00, salle G207 Bâtiment Sophie Germain
 
 **Introduction à l'analyse des algorithmes**
    - Tri par insertion
+   - Complexité asymptotique, notation $$\mathcal{\Theta}$$ et $$\mathcal{O}$$
    - Analyse de complexité
 
 **TD :** [Introduction à Rust](tds/intro-rust)
 
 
-
 #### 5 février
 
 **Algorithmes de tri**
-   - Complexité asymptotique, notation $$\mathcal{\Theta}$$ et $$\mathcal{O}$$
    - Principe *diviser pour régner*
    - Exemple : *tri fusion*
    
    **TD :** [Algorithmes de tri](tds/tris)
+
    
 #### 12 février
    
