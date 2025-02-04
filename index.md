@@ -88,16 +88,6 @@ A. Bostan, F. Chyzak, M. Giusti, R. Lebreton, G. Lecerf, B. Salvy, É. Schost.
 Palaiseau: Frédéric Chyzak (auto-édit.), sept. 2017.
 ISBN : 979-10-699-0947-2. <https://hal.archives-ouvertes.fr/AECF/>
 
-G. Swinnen.
-*Apprendre à programmer avec Python 3*.
-Eyrolles 2009-2010.
-ISBN : 978-2-212-12708-9. Côte BU : 005.13pyt SWI.
-
 C. H. Papadimitriou.
 *Computational complexity*.
 Addison-Wesley, 1994. 523 pages.
-
-B. Cordeau, L. Pointal. Une introduction à Python 3. Polycopié, licence libre CC3.0. 2015. https://perso.limsi.fr/pointal/python:courspython3.
-
-G. Swinnen. Apprendre à programmer avec Python 3. Eyrolles 2009-2010. ISBN : 978-2-212-12708-9. Côte BU : 005.13pyt SWI.
-
