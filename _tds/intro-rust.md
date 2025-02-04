@@ -188,7 +188,7 @@ fn fonction_qui_ne_fait_pas_grand_chose() {
 }
 ~~~
 
-On indiquera la liste des paramètres entre parenthèses, en indiquant à chaque fois le type de l'argument après un deux-points '`:`' qui suit le nom de l'argument. Le corps de la fonction commence à la ligne suivante et doit être écrit avec un retrait de quelques espaces.
+On indiquera la liste des paramètres entre parenthèses, en indiquant à chaque fois le type de l'argument après un deux-points '`:`' qui suit le nom de l'argument. Le corps de la fonction commence à la ligne suivante et peut être écrit par souci de lisibilité avec un décalage de quelques espaces (on parle alors d'indentation du code).
 Voici une fonction qui imprime les `n` premiers termes  de la suite *Fibonacci*.
 
 ~~~rust
