@@ -295,7 +295,7 @@ tableau_toto[99]= "joujou" ;
 
 Si on veut le modifier à l'intérieur d'une fonction, il faut aussi utiliser des références, à noter que lorsqu'on accède à une case (aussi bien pour la lecture que l'écriture), on a pas besoin d'utiliser le caractère '`*`' :
 ~~~rust
-let mut tableau_toto :&mut [String; 100] = &mut ["toto";100] ;
+let tableau_toto :&mut [String; 100] = &mut ["toto";100] ;
 tableau_toto[99]= "joujou" ;
 ~~~
 
