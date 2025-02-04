@@ -280,7 +280,8 @@ let u = tableau_toto[99];
 
 Ainsi avec le code ci-dessus, `u` prend la valeur de la dernière case de `tableau_toto` (on rappelle que dans la plupart des langages de programmation, les tableaux sont indicés à partir de zéro).
 
-On peut retrouver la taille d'un tableau avec l'atribut `len`.
+On peut retrouver la taille d'un tableau avec l'atribut `len`. A noter que le type correspondant est `usize` (ce qui indique qu'il dépend en pratique de l'architecture qui de la machine sur laquelle on compilera le programme).
+
 ~~~rust
 let tableau :[String; 100] = ["toto";100] ;
 let taille = tableau.len() ;
@@ -292,13 +293,25 @@ let mut tableau_toto :[String; 100] = ["toto";100] ;
 tableau_toto[99]= "joujou" ;
 ~~~
 
-
 Si on veut le modifier à l'intérieur d'une fonction, il faut aussi utiliser des références, à noter que lorsqu'on accède à une case (aussi bien pour la lecture que l'écriture), on a pas besoin d'utiliser le caractère '`*`' :
 ~~~rust
 let mut tableau_toto :&mut [String; 100] = &mut ["toto";100] ;
 tableau_toto[99]= "joujou" ;
 ~~~
 
+Enfin, si l'on veut avoir une fonction qui prend en entrée des tableaux de taille variable, il est nécessaire d'utiliser une constante locale en paramètre de la fonction de la manière suivante :
+
+~~~rust
+fn fonction_tableau<const LEN: usize>(tab: &mut[i64; LEN]){
+ //Mettre votre code ici
+}
+~~~
+
+Ensuite, on peut ignorer cette constante lorqu'on appelle la fonction: 
+
+~~~rust
+fonction_tableau(tab);
+~~~
 
 **:**{:.exercise}
 
