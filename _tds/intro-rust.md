@@ -94,7 +94,7 @@ let f = 6./5. ;
 let b = n > 1;
 ~~~
 
-On peut également transformer des couples d'entiers ou de flotants en booléens avec les opérateurs d'ordre, d'égalité ou d'inégalité : '`<`', '`>`', '`=`', et '`!=`' de la manière usuelle. 
+On peut également transformer des couples d'entiers ou de flotants en booléens avec les opérateurs d'ordre, d'égalité ou d'inégalité : '`<`', '`>`', '`==`', et '`!=`' de la manière usuelle. 
 
 **:**{:.exercise}
 
