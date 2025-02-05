@@ -245,7 +245,7 @@ let n : &mut i32= &mut 5;
 
 Pour accéder à la valeur de la case mémoire (que ça soit pour lire la valeur ou réécrire dessus), on utilisera '`*n`' (Similaire au langage C, et analogue au '`!`' du Ocaml).
 ~~~rust
-let mut n = &mut 5;
+let n = &mut 5;
 *n= *n+1;
 print!("{}",*n);
 ~~~
@@ -253,12 +253,14 @@ print!("{}",*n);
 A présent, on peut utiliser une fonction qui va prendre en argument la case mémoire, en faisant attention que le type passé en argument change (cela devient le type de la case mémoire, c'est à dire `&mut type_dela_donnee_dans_la_case`).
 
 ~~~rust
-let mut n = &mut 5;
 fn succ(n:&mut i32){
  *n= *n+1;
 }
+fn main () {
+let n = &mut 5;
 succ(n);
 print!("{}",*n);
+}
 ~~~
 
 ## Tableaux
