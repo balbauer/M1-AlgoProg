@@ -244,7 +244,7 @@ On va donc devoir utiliser une stratégie similaire à celle des pointeurs dans 
 let n : &mut i32= &mut 5;
 ~~~
 
-Pour accéder à la valeur de la case mémoire (que ça soit pour lire la valeur ou réécrire dessus), on utilisera '`*n`' (Similaire au langage C, et analogue au '`!`' du OCaml).
+Pour accéder à la valeur de la case mémoire (que ça soit pour lire la valeur ou réécrire dessus), on utilisera '`*n`' (Similaire au langage C, et analogue au '`!`' d'OCaml).
 ~~~rust
 let n = &mut 5;
 *n= *n+1;
