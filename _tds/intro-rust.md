@@ -205,7 +205,7 @@ fn fibonacci(n:i32) {
 ~~~
 
 On peut bien sûr écrire une fonction qui nous renvoie quelque chose. Dans ce cas, il faut d'abord écrire quel est le type renvoyé attendu avec le mot-clef '`->`'.
-Ensuite à l'intérieur de la fonction, il est important de mettre l'expression de ce que l'on veut renvoyer `en dernier` : C'est à dire qu'on doit nécessairement sortir de la fonction après qu'on renvoie la donnée, cette pour cette raison qu'on ne met pas de point-virgule après cette expression (sinon lors de l'execution, on va chercher à exécuter la ligne vide qui suit).
+Ensuite à l'intérieur de la fonction, il est important de mettre l'expression de ce que l'on veut renvoyer "en dernier" : C'est à dire qu'on doit nécessairement sortir de la fonction après qu'on renvoie la donnée, c'est pour cette raison qu'on ne met pas de point-virgule après cette expression (sinon lors de l'execution, on va chercher à exécuter la ligne vide qui suit).
 Voici une fonction qui renvoie la somme des carrés des entiers de 0 à `n` inclu.
 
 ~~~rust
@@ -229,7 +229,7 @@ Par exemple `table_de_multiplication(3, 10)` doit retourner `0 3 6 9 12 15 18 21
 
 ## Références
 
-Par défaut une fonction ne modifiera pas une variable (même si elle est censée être modifiable avec le mot-clef '`mut`'), car cette dernière copie la donnée prise en entrée, et travaille sur la copie de la donnée sans modifier l'original. On peut tester la fonction suivante :
+Par défaut une fonction ne modifiera pas une variable (même si elle est censée être modifiable avec le mot-clef '`mut`'), car la fonction copie la donnée prise en entrée, et travaille sur la copie de la donnée sans modifier l'original. On peut tester la fonction suivante pour s'en convaincre :
 ~~~rust
 let mut n = 5;
 fn succ(n:i32){
@@ -244,7 +244,7 @@ On va donc devoir utiliser une stratégie similaire à celle des pointeurs dans 
 let n : &mut i32= &mut 5;
 ~~~
 
-Pour accéder à la valeur de la case mémoire (que ça soit pour lire la valeur ou réécrire dessus), on utilisera '`*n`' (Similaire au langage C, et analogue au '`!`' du Ocaml).
+Pour accéder à la valeur de la case mémoire (que ça soit pour lire la valeur ou réécrire dessus), on utilisera '`*n`' (Similaire au langage C, et analogue au '`!`' du OCaml).
 ~~~rust
 let n = &mut 5;
 *n= *n+1;
@@ -322,7 +322,7 @@ Définissez le tableau `tableau = [34, 0, -17, 5, 18, 9]`, puis triez et affiche
 
 **:**{:.exercise}
 
-Modifier la fonction `fibonacci(n)` de la Section 5 afin qu'elle renvoie un tableau avec les `n` premiers termes de la suite Fibonacci.
+Modifiez la fonction `fibonacci(n)` de la Section 5 afin qu'elle renvoie un tableau avec les `n` premiers termes de la suite Fibonacci.
 
 # Exercices
 
