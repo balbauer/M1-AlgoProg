@@ -150,7 +150,7 @@ while n < 101 {
 ~~~
 
 
-La boucle `for` est très utile lorsque on veut répéter un bloc d'instructions un nombre de fois connu à l'avance. Si on veut par exemple imprimer tous les nombres de 0 à 10, voici comment on peut le faire à l'aide de l'instruction `for`.
+La boucle `for` est très utile lorsque on veut répéter un bloc d'instructions un nombre de fois connu à l'avance. Si on veut par exemple afficher dans le canal standard tous les nombres de 0 à 10 exclu, voici comment on peut le faire à l'aide de l'instruction `for`.
 
 ~~~rust
 for i in 0..10 {
@@ -158,7 +158,7 @@ for i in 0..10 {
 }
 ~~~
 
-A noter que, bien que ça ne soit pas intuitif, le dernier entier de la boucle n'est pas parcouru (ça doit se comprendre comme le fait qu'on sort de la boucle quand l'entier est atteint). Par exemple le code ci-dessus entrera 10 fois dans la boucle (pour `i` de `0` à `9`).
+A noter que, bien que ça ne soit pas intuitif (surtout par rapport à d'autres langages de programmation), le dernier entier de la boucle n'est pas parcouru (ça doit se comprendre comme le fait qu'on sort de la boucle quand l'entier est atteint). Par exemple le code ci-dessus entrera 10 fois dans la boucle (pour `i` de `0` à `9`).
 
 **:**{:.exercise} 
 
