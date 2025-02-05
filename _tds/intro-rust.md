@@ -204,13 +204,14 @@ fn fibonacci(n:i32) {
 }
 ~~~
 
-On peut bien sûr écrire une fonction qui nous renvoie quelque chose. Dans ce cas, il faut écrire quel est le type renvoyé attendu avec le mot-clef '``'. Ceci se fait avec le mot-clé `return`.
-Voici une fonction qui renvoie la somme des carrés des entiers de 0 à `n`.
+On peut bien sûr écrire une fonction qui nous renvoie quelque chose. Dans ce cas, il faut d'abord écrire quel est le type renvoyé attendu avec le mot-clef '`->`'.
+Ensuite à l'intérieur de la fonction, il est important de mettre l'expression de ce que l'on veut renvoyer `en dernier` : C'est à dire qu'on doit nécessairement sortir de la fonction après qu'on renvoie la donnée, cette pour cette raison qu'on ne met pas de point-virgule après cette expression (sinon lors de l'execution, on va chercher à exécuter la ligne vide qui suit).
+Voici une fonction qui renvoie la somme des carrés des entiers de 0 à `n` inclu.
 
 ~~~rust
 fn somme_carres(n:i32)->i32{
  let mut total:i32 = 0 ;
- for i in 1..n {
+ for i in 1..(n+1) {
         total = total + i*i;
  }
  total
