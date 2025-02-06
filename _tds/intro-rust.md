@@ -294,19 +294,19 @@ Ainsi avec le code ci-dessus, `u` prend la valeur de la dernière case de `table
 On peut retrouver la taille d'un tableau avec l'atribut `len`. A noter que le type correspondant est `usize` (ce qui indique qu'il dépend en pratique de l'architecture qui de la machine sur laquelle on compilera le programme).
 
 ~~~rust
-let tableau :[String; 100] = ["toto";100] ;
+let tableau :[&str; 100] = ["toto";100] ;
 let taille = tableau.len() ;
 ~~~
 
 Et si le tableau est modifiable (avec le mot-clef `mut`), on peut modifier les cases de ce tableau (mais pas sa taille qui est dépendante du type) :
 ~~~rust
-let mut tableau_toto :[String; 100] = ["toto";100] ;
+let mut tableau_toto :[&str; 100] = ["toto";100] ;
 tableau_toto[99]= "joujou" ;
 ~~~
 
 Si on veut le modifier à l'intérieur d'une fonction, il faut aussi utiliser des références, à noter que lorsqu'on accède à une case (aussi bien pour la lecture que l'écriture), on a pas besoin d'utiliser le caractère '`*`' :
 ~~~rust
-let tableau_toto :&mut [String; 100] = &mut ["toto";100] ;
+let tableau_toto :&mut [&str; 100] = &mut ["toto";100] ;
 tableau_toto[99]= "joujou" ;
 ~~~
 
