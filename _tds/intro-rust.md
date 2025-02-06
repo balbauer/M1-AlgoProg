@@ -218,6 +218,14 @@ fn somme_carres(n:i32)->i32{
 }
 ~~~
 
+On remarque qu'une fonction peut s'appeler elle même récursivement (mais dans ce cas, comme lorsque on utilise une boucle '`while`', on prend le risque que le programme ne termine pas).
+
+~~~rust
+fn somme_carres2(n:i32)->i32{
+ if n == 0 {0}
+ else {n + somme_carres2(n-1)}
+~~~
+
 Vous trouverez plus d'informations sur les fonctions en Rust ici : [rust-book-fr](https://jimskapt.github.io/rust-book-fr/ch03-03-how-functions-work.html).
 
 **:**{:.exercise}
