@@ -69,7 +69,7 @@ Si en Rust il n'est pas nécessaire d'écrire des lignes de code spécifiques po
 
 ~~~rust
 let n:i32 = 5;
-let _message:String = "Bonjour";
+let _message:&str = "Bonjour";
 let _pi:f32 = 3.14;
 let b:bool = true;
 ~~~
@@ -110,7 +110,7 @@ L'instruction qui est sans doute la plus utile afin de permettre un tel comporte
 
 ~~~rust
 if age > 18 {
-        print! ("Tu peux entrer.")
+        print!("Tu peux entrer.")
     } else {
         print!("Tu es trop petit.")
     }
