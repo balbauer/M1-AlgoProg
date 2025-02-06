@@ -316,13 +316,26 @@ Ensuite, on peut ignorer cette constante lorqu'on appelle la fonction:
 fonction_tableau(tab);
 ~~~
 
+On va maintenant terminer sur un cas un peu particulier où il n'y a pas de tableau en entrée, mais en sortie. 
+~~~rust
+fn fonction_tableau<const LEN: usize>()->[i64; LEN]{
+ //Mettre votre code ici
+}
+~~~
+
+En effet, la fonction ne peut plus deviner implicitement la taille du tableau qu'elle est censée renvoyer.
+On va donc la lancer de la manière suivante (si par exemple, on souhaite construire un tableau de taille 50):
+~~~rust
+fonction_tableau::<50>();
+~~~
+
 **:**{:.exercise}
 
 Définissez le tableau `tableau = [34, 0, -17, 5, 18, 9]`, puis triez et affichez le tableau.
 
 **:**{:.exercise}
 
-Modifiez la fonction `fibonacci(n)` de la Section 5 afin qu'elle renvoie un tableau avec les `n` premiers termes de la suite Fibonacci.
+Transformez la fonction `fibonacci(n)` de la Section 5 en `fibonacci::<n>()` afin qu'elle renvoie un tableau avec les `n` premiers termes de la suite Fibonacci.
 
 # Exercices
 
@@ -338,7 +351,7 @@ Vous pouvez voir une jolie animation de l'exécution de l'algorithme sur la page
 
 **Remarque**. En réalité, il suffit de tester uniquement les multiples des nombres de 2 à $$\sqrt{N}$$, puisque un nombre composé plus petit ou égal à $$N$$, a forcément un facteur plus petit ou égal à $$\sqrt{N}$$.
 
-Vous devez maintenant programmer le crible d'Ératosthène en Rust. Écrivez une fonction `eratosthene(N)` qui prend comme paramètre un entier naturel $$N$$ et qui affiche à l'écran la liste de tous les nombres premiers plus petits ou égaux à $$N$$. Il existe plusieurs façons de coder cet algorithme en Rust, vous êtes libres de faire à votre propre guise. 
+Vous devez maintenant programmer le crible d'Ératosthène en Rust. Écrivez une fonction `eratosthene::<n>()` qui prend comme paramètre un entier naturel `n` et qui affiche à l'écran la liste de tous les nombres premiers plus petits ou égaux à `n`. Il existe plusieurs façons de coder cet algorithme en Rust, vous êtes libres de faire à votre propre guise. 
 
 ## Recherche dichotomique
 
