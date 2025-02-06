@@ -92,7 +92,7 @@ Tri-Bulles(T)
 
 * Quel est le temps d'exécution de cet algorithme dans le cas le plus défavorable? Et dans le cas le plus favorable?
 
-* Calculez en pratique le temps d'exécution de vos deux tris (version naïve et version optimisée). Pour cela, peut utiliser la fonction `Instant:now()` de la manière suivante : débutez le compteur en insérant l'instruction `let now = std::time::Instant::now();`. Puis affichez dans le canal standard le temps écoulé en secondes en écrivant `print("{}", now.elapsed().as_secs())`. Afin de pouvoir observer significativement la différence de temps entre les deux implémentations, générez des tableaux de taille très grande (par exemple de taille 50000). 
+* Calculez en pratique le temps d'exécution de vos deux tris (version naïve et version optimisée). Pour cela, peut utiliser la fonction `Instant:now()` de la manière suivante : débutez le compteur en insérant l'instruction `let now = std::time::Instant::now();`. Puis affichez dans le canal standard le temps écoulé en secondes en écrivant `print!("{}", now.elapsed().as_secs())`. Afin de pouvoir observer significativement la différence de temps entre les deux implémentations, générez des tableaux de taille très grande (par exemple de taille 50000). 
 
 
 ## Tri par sélection (selection sort)
