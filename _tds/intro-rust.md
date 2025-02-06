@@ -6,7 +6,7 @@ Rust est un langage de programmation multi-paradigme.
 
 Ce mini-tutoriel est une introduction très basique et rapide à la syntaxe et aux règles du langage. Si vous voulez approfondir plus, plein de tutoriels bien faits existent sur le net, n'hésitez pas à les consulter.
 
-Pendant ces TP vous travaillerez sur vos machines. Pour installer rust sur vos machines, vous pouvez lancer ces commandes sur une machine Ubuntu mise à jour (2025).
+Pendant ces TP vous travaillerez sur vos machines. Pour installer Rust sur vos machines, vous pouvez lancer ces commandes sur une machine Ubuntu mise à jour (2025).
 ~~~bash
 >>> sudo apt-get install curl
 >>> sudo curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -22,7 +22,7 @@ Puis pour exécuter le binaire on lancera
 ~~~
 
 ## Structure générale d'un fichier de code
-En rust, lors de l'execution d'un programme, on lance la fonction main(). Ainsi le coeur du code qu'on veut executer sera à l'intérieur de cette fonction. On note que tout ce qui suit '`//`' (sur la même ligne) sera ignoré par le compilateur.
+En Rust, lors de l'execution d'un programme, on lance la fonction main(). Ainsi le coeur du code qu'on veut executer sera à l'intérieur de cette fonction. On note que tout ce qui suit '`//`' (sur la même ligne) sera ignoré par le compilateur.
 ~~~rust
 fn main() {
 //Mettre son code ici
