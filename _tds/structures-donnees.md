@@ -1,7 +1,7 @@
 ---
 title: Structures de données en Rust
 ---
-
+<!--# This is a comment 
 ## Les chaînes de caractère en Rust
 
 Avant de commencer les exercices, voici quelques mots sur les chaînes de caractères en Python dont vous aurez besoin tout au long de cette séance.
@@ -27,8 +27,7 @@ Il est possible de concaténer deux chaînes à l'aide de l'opérateur `+`.
 >>> ch1 + ch2
 'La raison est la tienne mais la chèvre est la mienne'
 ~~~
-
-
+-->
 
 ## Parenthésage
 
