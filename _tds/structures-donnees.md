@@ -8,15 +8,13 @@ Avant de commencer les exercices, voici quelques mots sur les chaînes de caract
 
 Les chaînes de caractères sont vues par Python comme une *collection ordonnée d'éléments*. Ceci veut dire que les caractères qui constituent une chaîne sont disposés dans un certain ordre et que l'on peut accéder à chaque caractère à l'aide d'un indice. **Attention !** Le premier caractère de la chaîne a pour indice 0 (et non 1).
 
-~~~python
->>> chaine = "Algorithmique et Programmation"
->>> print(chaine[0], chaine[2], chaine[10], chaine[-1])
-A g q n
+~~~rust
+let message = "Bonjour";
 ~~~
 
 Comme vous pouvez le voir, les indices négatifs peuvent être utilisés afin d'accéder aux caractères de la chaîne par la fin. Nous pouvons déterminer la longueur d'une chaîne, c.-à-d. le nombre de ses caractères,  à l'aide de la fonction `len()`.
 
-~~~python
+~~~rust
 >>> print(len(chaine))
 30
 ~~~
