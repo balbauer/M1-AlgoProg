@@ -25,7 +25,7 @@ Le fichier de code sur lequel on va à présent travailler est `src/main.rs` (c'
 >>> cd projet
 >>> cargo build
 ~~~
-Le fichier binaire construit est `target/debug/projet` (c'est à dire, c'est le fichier projet qui se trouve dans le dossier `debug` lui même qui est dans le dossier `target`). On l'execute de la manière traditionelle.
+Le fichier binaire construit est `target/debug/projet` (c'est à dire, c'est le fichier projet qui se trouve dans le dossier `debug` lui même qui est dans le dossier `target`). On l'exécute de la manière traditionelle.
 ~~~bash
 >>> ./target/debug/projet
 ~~~
