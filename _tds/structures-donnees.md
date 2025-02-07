@@ -29,6 +29,10 @@ Il est possible de concaténer deux chaînes à l'aide de l'opérateur `+`.
 ~~~
 -->
 
+## Types de données personnalisés
+
+
+
 ## Parenthésage
 
 Le but de cet exercice est d'écrire un programme en Python capable de vérifier si une expression est bien parenthésée ou pas. Les trois types de parenthésage qui seront pris en compte sont les parenthèses `(`, `)`, les crochets `[`, `]` et les accolades `{`, `}`.
