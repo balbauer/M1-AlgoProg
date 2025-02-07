@@ -310,31 +310,63 @@ let tableau_toto :&mut [&str; 100] = &mut ["toto";100] ;
 tableau_toto[99]= "joujou" ;
 ~~~
 
-Enfin, si l'on veut avoir une fonction qui prend en entrée des tableaux de taille variable, il est nécessaire d'utiliser une constante locale en paramètre de la fonction de la manière suivante :
+Il faut savoir que Rust est un langage très fortement typé, au point où un tableau de taille 4 et un tableau de taille 5 sont considérés comme des éléments de type différent. C'est pour cette raison que si on essaye de lancer le code suivant:
 
+~~~rust
+fn main (){
+	let tab = [1,2,3];
+	fonction_tableau (3, tab);
+}
+
+
+fn fonction_tableau (n :usize, tab : [i32; n])-> i32{
+tab[0]
+}
+~~~
+
+On reçoit l'erreur suivante:
+
+~~~bash
+error[E0435]: attempt to use a non-constant value in a constant
+ --> test2.rs:7:44
+  |
+7 | fn fonction_tableau (n :usize, tab : [i32; n])-> i32{
+  |                      -                     ^
+  |                      |
+  |                      this would need to be a `const`
+
+error: aborting due to 1 previous error
+
+For more information about this error, try `rustc --explain E0435`.
+~~~
+
+Pour pouvoir arriver à nos fins, il est nécessaire d'utiliser une constante locale en paramètre de la fonction de la manière suivante :
 ~~~rust
 fn fonction_tableau<const LEN: usize>(tab: &mut[i64; LEN]){
  //Mettre votre code ici
 }
 ~~~
 
-Ensuite, on peut ignorer cette constante lorqu'on appelle la fonction: 
+En faisant ça, c'est comme si on définissait une infinité de fonctions paramétrées par LEN (avec chacune de ses fonctions qui prend en entrée un type de tableau différent).
+
+Dans le cas où l'entrée permet au compilateur d'inférer le paramètre (si par exemple on a un tableau de la taille LEN en entrée), on peut ignorer cette constante lorqu'on appelle la fonction: 
 
 ~~~rust
 fonction_tableau(tab);
 ~~~
 
-On va maintenant terminer sur un cas un peu particulier où il n'y a pas de tableau en entrée, mais en sortie. 
+Mais dans certains cas, il n'y a pas d'entrée qui permette de retrouver de quel paramètre il s'agit. Par exemple pour la fonction suivante :
 ~~~rust
 fn fonction_tableau<const LEN: usize>()->[i64; LEN]{
- //Mettre votre code ici
+ let tab = [0;LEN];
+ tab
 }
 ~~~
 
-En effet, la fonction ne peut plus deviner implicitement la taille du tableau qu'elle est censée renvoyer.
-On va donc la lancer de la manière suivante (si par exemple, on souhaite construire un tableau de taille 50):
+En effet, dans le cas ci-dessus la fonction ne peut plus deviner implicitement la taille du tableau qu'elle est censée renvoyer.
+On va donc la lancer en explicitant la taille du paramètre avec '`::<LEN>`' après le nom de la fonction de la manière suivante (si par exemple, on souhaite construire un tableau de taille 50):
 ~~~rust
-fonction_tableau::<50>();
+let tab = fonction_tableau::<50>();
 ~~~
 
 **:**{:.exercise}
