@@ -88,7 +88,9 @@ let grappe = Grappe_de_raisins(12);
 let fromage_qui_traine_dans_le_frigo = Gruyere{nb_trous:32, epaisseur_croute: 0.1};
 ~~~
 
-Et c'est ceci qu'on va utiliser pour construire un type correspondant aux listes simplement chaînée :
+## Les listes simplement chaînées
+
+On va donc utiliser le type somme pour construire un type correspondant aux listes simplement chaînées :
 
 ~~~rust
 enum List {
@@ -96,6 +98,8 @@ enum List {
     Listevide,
 }
 ~~~
+
+
 
 
 ## Parenthésage
