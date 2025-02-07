@@ -37,6 +37,7 @@ En Rust, comme dans de nombreux langages de programmation, il existe un nombre d
 
 * Seules les lettres a -> z, les chiffres 0-9 et le caractère '`_`' sont autorisés.
 * Le nom d'une variable doit toujours commencer par une lettre.
+* Si une variable n'est pas utilisée dans le reste du programme, on peut commencer son nom par le caractère '`_`' pour l'indiquer au compilateur (qui du coup n'enverra pas d'avertissement si la variable est inutilisée).
 
 Le mot clef '`let`' et le signe '`=`' est utilisé afin d'affecter une valeur à une variable. 
 
