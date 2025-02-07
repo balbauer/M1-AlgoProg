@@ -31,6 +31,71 @@ Il est possible de concaténer deux chaînes à l'aide de l'opérateur `+`.
 
 ## Types de données personnalisés
 
+En Rust comme dans la plupart de langages, on peut créer des types personnalisés. Pour cela il faut utiliser le mot-clef '`struct`'.
+Par exemple pour créer un type constant, on ajoutera (en dehors de la fonction `main`).
+
+~~~rust
+struct Typeconstant;
+~~~
+On remarque que l'usage veut que les noms des types nouvellement créés commencent par une majuscule.
+
+On peut construire des types à partir de produits cartésiens, il faut alors mettre en parenthèses et séparer par des virgules tous les types concernés.
+
+~~~rust
+struct Typepair(f64, i32);
+~~~
+
+Mais on peut aussi construire des structures avec un système de champs, on utilise alors les accolades '`{`', et '`}`' de la manière suivante :
+
+~~~rust
+struct Point {
+    abscisse: f64,
+    ordonnee: f64
+}
+~~~
+
+Et pour créer et accèder aux données, on le fait de la manière suivante:
+~~~rust
+let point1 = Point{abscisse : 3. , ordonnee :2.} ;
+let x = point1.abscisse ;
+~~~
+
+Enfin, on peut aussi construire un type somme (c'est à dire une union de différents type) avec le mot-clef '`enum`':
+
+~~~rust
+enum Aliments {
+  Noix,
+  Grappe_de_raisins (i32),
+  Grenade {nb_pepins:i32,  couleur:&str},
+  Gruyere {nb_trous:i64 , epaisseur_croute: f64}
+}
+~~~
+
+Il peut être lourd d'utiliser ce type en pratique:
+
+~~~rust
+let petite_noix_dans_ma_poche = Aliments::Noix;
+let grappe = Aliments::Grappe_de_raisins(12);
+let fromage_qui_traine_dans_le_frigo = Aliments::Gruyere{nb_trous:32, epaisseur_croute: 0.1};
+~~~
+
+Pour éviter d'avoir à redonner sans arrêt le nom du type, et si il n'y a pas d'ambiguïté, on peut utiliser '`use Nomdutype::*`':
+
+~~~rust
+use Aliments::*;
+let petite_noix_dans_ma_poche = Noix;
+let grappe = Grappe_de_raisins(12);
+let fromage_qui_traine_dans_le_frigo = Gruyere{nb_trous:32, epaisseur_croute: 0.1};
+~~~
+
+Et c'est ceci qu'on va utiliser pour construire un type correspondant aux listes simplement chaînée :
+
+~~~rust
+enum List {
+    Case(i32, Box<List>),
+    Listevide,
+}
+~~~
 
 
 ## Parenthésage
