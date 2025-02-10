@@ -118,7 +118,7 @@ Ecrire une fonction d'affichage `printlisteentiers`, ainsi que les deux fonction
 
 Le but de cet exercice est d'écrire un programme en Python capable de vérifier si une expression est bien parenthésée ou pas. Les trois types de parenthésage qui seront pris en compte sont les parenthèses `(`, `)`, les crochets `[`, `]` et les accolades `{`, `}`.
 
-Votre programme doit par exemple renvoyer `True` pour les expressions suivantes :
+Votre programme doit par exemple renvoyer `true` pour les expressions suivantes :
 
 * `a+(b+c)`
 * `((5*3)+(2*10))/2`
@@ -188,7 +188,7 @@ Vous pouvez remarquer que le résultat final **15** se trouve au sommet de la pi
 
 Votre programme pourra se composer des fonctions suivantes :
 
-* Une fonction `est_operateur(c)` qui prend en entrée un caractère et renvoie `True` s'il s'agit d'un opérateur et `False` sinon.
+* Une fonction `est_operateur(c)` qui prend en entrée un caractère et renvoie `true` s'il s'agit d'un opérateur et `False` sinon.
 * Une fonction `calcul(op, n, m)` qui prend en entrée un opérateur `op` parmi les quatre opérateurs autorisés et deux entiers `n` et `m` et qui renvoie le résultat du calcul `n op m`.
 * La fonction `evaluation(s)` qui prend en entrée une expression sous-forme de chaîne de caractères en notation polonaise inverse et renvoie le résultat du calcul.
 * Testez votre programme pour le calcul de l'expression $$5*(8-3)*3+((3−1)*2)/3$$ dont l'écriture en NPI est 
@@ -198,7 +198,7 @@ Votre programme pourra se composer des fonctions suivantes :
 
 ## Les dictionnaires en Rust
 
-Un *dictionnaire* est une structure de données en Rust qui permet d'accèder à ses éléments à l'aide d'un indice spécifique qu'on appelle la **clef**. Les informations qui y sont sauvegardées ne s'y trouvent pas dans un ordre précis (comme c'est le cas des listes), mais la clef nous aide à accéder à celles-ci. Par exemple, un dictionnaire peut contenir un carnet téléphonique et on peut accéder au numéro de téléphone souhaité à l'aide du nom de la personne. Le nom joue alors ici le rôle de la clef.  
+Un *dictionnaire* est une structure de données en Rust qui permet d'accèder à ses éléments à l'aide d'un indice spécifique qu'on appelle la **clef**. Les informations qui y sont sauvegardées ne s'y trouvent pas dans un ordre précis (comme c'est le cas des listes), mais la clef nous aide à accéder à celles-ci. Par exemple, un dictionnaire peut contenir un carnet téléphonique et on peut accéder au numéro de téléphone souhaité à l'aide du nom de la personne. Le nom joue alors ici le rôle de la clef. Il est important de noter que dans un dictionnaire, il y a unicité des clefs, on ne peut pas rajouter deux fois la même clef. En revanche on peut ajouter deux fois la même valeur (avec des clefs différentes donc). En rust si on ajoute une deuxième fois un clef, on va écraser la première entrée correspondant à cette clef (sans message d'erreurs).
 
 On reconnaît un dictionnaire au fait que ses éléments sont entourés par une paire d'accolades. On note alors un dictionnaire vide par `{ }`.
 
@@ -206,81 +206,71 @@ Supposons qu'on souhaite créer un dictionnaire pour traduire les couleurs du fr
 
 ~~~rust
 use std::collections::HashMap;
-
+fn main() {
+    let mut couleurs_zu_farben = HashMap::new(); 
+ 
+    // On ajoute des paires clef-valeur dans notre dictionnaire. 
+    couleurs_zu_farben.insert("rouge", "rot");
+    couleurs_zu_farben.insert("vermillon", "rot"); 
+    couleurs_zu_farben.insert("bleu", "blau");
+    couleurs_zu_farben.insert("vert", "grün");
+    couleurs_zu_farben.insert("blanc", "weiss");
+    couleurs_zu_farben.insert("noir","schwartz");
+}
 ~~~
 
-Lorsque on affiche un dictionnaire, ceci apparaît sous la forme *clé-valeur*. Ici les mots français sont les clés, et les mots anglais les valeurs. Pour voir la traduction du mot *rouge* en anglais il suffit d'écrire
+Lorsqu'on affiche un dictionnaire, ceci apparaît sous la forme *clef-valeur*. Ici les mots français sont les clefs, et les mots allemands les valeurs. Pour voir la traduction du mot *rouge* en allemand, il suffit d'écrire :
 
 ~~~rust
->>> print(dico['rouge'])
-red
+couleurs_zu_farben["rouge"];
 ~~~
 
-On peut supprimer un couple clé-valeur du dictionnaire avec la commande `del`
+Pour l'affichage du dictionnaire en entier, on écrira :
+~~~rust
+println!("couleurs_zu_farben : {:?}", couleurs_zu_farben); 
+~~~
+
+On peut supprimer un couple clef-valeur du dictionnaire avec la commande `remove`
 
 ~~~rust
->>> del dico['noir']
->>> print(dico)
-{'vert': 'green', 'rouge': 'red'}
+couleurs_zu_farben.remove("vert");
 ~~~
 
-On peut connaître le nombre d'entrées dans le dictionnaire à chaque instant en utilisant la fonction `len()`.
+On peut connaître le nombre d'entrées dans le dictionnaire à chaque instant en utilisant la fonction `len`.
 
-~~~python
->>> print(len(dico))
-2
+~~~rust
+couleurs_zu_farben.len();
 ~~~
 
-Il possible de tester si la traduction d'une couleur se trouve dans le dictionnaire ou pas à l'aide du mot-clé `in`.
+Il possible de tester si la traduction d'une couleur se trouve dans le dictionnaire ou pas à l'aide du mot-clé `contains_key`.
 
-~~~python
->>> couleur = "blanc"
->>> if couleur in dico :
-...     print("Traduction :", dico[couleur])
-... else :
-...     print("La traduction de ce mot est inconnue.")
-... 
-La traduction de ce mot est inconnue.
+~~~rust
+couleurs_zu_farben.contains_key("orange");
 ~~~
 
-Nous pouvons appliquer aux dictionnaires quelques méthodes spécifiques. La méthode `keys()` renvoie la séquence des clés utilisées dans le dictionnaire.
 
-~~~python
->>> print(dico.keys())
-dict_keys(['vert', 'rouge'])
+On peut parcourir un dictionnaire de plusieurs façons en utilisant une simple boucle `for` :
+
+~~~rust
+    for (clef, valeur) in &couleurs_zu_farben { 
+    println!("Français : {} - Deutsch : {}", clef, valeur); 
+    } 
 ~~~
 
-De façon analogue, la méthode `values()` permet de voir la séquence des *valeurs* qui se trouvent dans le dictionnaire.
+Ou utiliser la fonction `iter`.
 
-~~~python
->>> print(dico.values())
-dict_values(['green', 'red'])
+~~~rust
+ for (clef, val) in couleurs_zu_farben.iter() {
+    println!("Français: {clef} Deutsch: {val}");
+}
 ~~~
 
-On peut parcourir un dictionnaire de plusieurs façons en utilisant une simple boucle `for`.
+On peut aussi faire l'iteration avec `keys`.
 
-~~~python
->>> for cle in dico :
-...     print(cle)
-... 
-vert
-rouge
-~~~
-
-~~~python
->>> for cle in dico :
-...     print(cle, dico[cle])
-... 
-vert green
-rouge red
-~~~
-
-~~~python
->>> for cle, valeur in dico.items() :
-...     print(cle, valeur)
-... 
-vert green
-rouge red
+~~~rust
+    for clef in couleurs_zu_farben.keys() { 
+    println!("Franzose : {} - Allemand : {}", clef, couleur_a_farben[clef]); 
+    }
 ~~~
 
 ### Un premier exercice
