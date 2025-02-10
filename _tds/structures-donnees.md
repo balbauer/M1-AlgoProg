@@ -294,17 +294,13 @@ Nous utiliserons ici les *dictionnaires* afin de stocker la correspondance entre
 
 Ecrivez les fonctions suivantes :
 
-* Une fonction `creerDictionnaire(d)` qui crée et retourne le dictionnaire des correspondances. Le paramètre `d` indique le décalage souhaité. Pour cela, vous pouvez utiliser le code ASCII des lettres minuscules. Les fonctions `ord(c)` et `chr(c)` vous seront sans doute utiles :
+* Une fonction `creer_dictionnaire(d)` qui crée et retourne le dictionnaire des correspondances. Le paramètre `d` indique le décalage souhaité. Pour cela, vous pouvez utiliser le code ASCII des lettres minuscules. Pour transformer un caractère en un entier qui correspond à son code ASCII, on utilisera `u32::from(char::x)` et pour l'opération inverse on utilisera le code suivant (où on opère sur l'entier `z`):
 
-~~~python
->>> ord('a')
-97
->>> chr(97)
-'a'
->>> chr(ord('a') + 3)
-'d'
-~~~ 
+~~~rust
+let z = y as u8;
+let c = char::from(z);
+~~~
 
-* Une fonction `chiffrementLettre(l, dico)` qui prend en entrée une lettre `l` et qui renvoie la lettre chiffrée correspondante selon le dictionnaire `dico`.
-* Une fonction `chiffrementPhrase(p, dico)` qui prendre en entrée une phrase `p`  sous forme de chaîne de caractères et un dictionnaire `dico` et qui renvoie une nouvelle chaîne de caractères, correspondant au chiffré de `p`.
-* Une fonction `inverseDictionnaire(dico)` qui prend en entrée le dictionnaire que vous avez construit et qui renvoie un nouveau dictionnaire qui inverse les clés et les valeurs du dictionnaire `dico`. Testez-la en déchiffrant la phrase que vous venez juste de chiffer.
+* Une fonction `chiffrement_lettre(l, dico)` qui prend en entrée une lettre `l` et qui renvoie la lettre chiffrée correspondante selon le dictionnaire `dico`.
+* Une fonction `chiffrement_phrase(p, dico)` qui prendre en entrée une phrase `p`  sous forme de chaîne de caractères et un dictionnaire `dico` et qui renvoie une nouvelle chaîne de caractères, correspondant au chiffré de `p`.
+* Une fonction `inverse_dictionnaire(dico)` qui prend en entrée le dictionnaire que vous avez construit et qui renvoie un nouveau dictionnaire qui inverse les clefs et les valeurs du dictionnaire `dico`. Testez-la en déchiffrant la phrase que vous venez juste de chiffer.
