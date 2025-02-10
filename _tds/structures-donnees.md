@@ -63,15 +63,17 @@ let x = point1.abscisse ;
 Enfin, on peut aussi construire un type somme (c'est à dire une union de différents type) avec le mot-clef '`enum`':
 
 ~~~rust
-enum Aliments {
+enum Aliments <'a>{
   Noix,
   Grappe_de_raisins (i32),
-  Grenade {nb_pepins:i32,  couleur:&str},
+  Grenade {nb_pepins:i32,  couleur:&'a str},
   Gruyere {nb_trous:i64 , epaisseur_croute: f64}
 }
 ~~~
 
-Il peut être lourd d'utiliser ce type en pratique:
+On remarque que dès qu'on utilise un type référence (comme le type '`&str`'), il faut rajouter `'a` comme indiqué ci-dessus.
+
+On remarque avec l'exemple qui suit qu'il peut être lourd d'utiliser ce type en pratique:
 
 ~~~rust
 let petite_noix_dans_ma_poche = Aliments::Noix;
@@ -88,17 +90,27 @@ let grappe = Grappe_de_raisins(12);
 let fromage_qui_traine_dans_le_frigo = Gruyere{nb_trous:32, epaisseur_croute: 0.1};
 ~~~
 
-## Les listes simplement chaînées
-
-On va donc utiliser le type somme pour construire un type correspondant aux listes simplement chaînées :
+Un type peut se faire référence à lui même, mais il doit alors utiliser le mot clef `Box`, et les crochets de la manière suivante :
 
 ~~~rust
-enum List {
-    Case(i32, Box<List>),
+enum Poupeerusse {
+Poupeepleine,
+Poupeevide(Box<Poupeerusse>)
+}
+~~~
+
+## Les listes simplement chaînées
+
+On va donc utiliser le type somme pour construire un type correspondant aux listes simplement chaînées de la manière suivante :
+
+~~~rust
+enum Listeentiers {
+    Case(i32, Box<Liste>),
     Listevide,
 }
 ~~~
 
+Ecrire une fonction d'affichage `printlisteentiers`, ainsi que deux fonction `pop_entier` et `push_entier` abordées en cours.
 
 
 
@@ -108,8 +120,8 @@ Le but de cet exercice est d'écrire un programme en Python capable de vérifier
 
 Votre programme doit par exemple renvoyer `True` pour les expressions suivantes :
 
-* `[a+(b+c)]`
-* `[((5*3)+(2*10))/2]`
+* `a+(b+c)`
+* `((5*3)+(2*10))/2`
 
 et `False` pour 
 
@@ -128,6 +140,16 @@ Dans l'exemple suivant vous pouvez observer l'évolution de la pile à chaque le
 ![](parenthesage.jpg){: style="width:842px;margin: 1.5em 0"}
 {:.centered}
 
+Pour cet exercie, il peut être intéressant d'utiliser le type `String` qui permet d'utiliser les fonctions push et pop déjà implémentées.
+On procédera de la manière suivante
+
+~~~rust
+let mut chaine = String::from("tuer n'est pas convaincre.");
+let premier_caractere = chaine.pop();
+chaine.push ('!'); 
+~~~
+
+<!--# This is a comment 
 Voici une fonctionnalité des listes en Python qui peut vous aider dans la réalisation de votre programme :
 
 ~~~python
@@ -145,6 +167,7 @@ La méthode `pop()`appliquée à une liste, dépile et renvoie l'élément au so
 >>> print(L)
 ['a', 'b', 'c', 'e']
 ~~~
+-->
 
 Pour réaliser votre programme vous pouvez suivre ces étapes :
 
