@@ -5,6 +5,7 @@ permalink: pretty
 title: "Analyse d'algorithmes et programmation"
 tagline: M1 MINT
 authors:
+  - name: Balthazar Bauer
   - name: Christina Boura
     url: 'https://christinaboura.wordpress.com/'
   - name: Luca De Feo
@@ -13,7 +14,6 @@ authors:
     url: 'https://alexgelin.github.io/'
   - name: Yann Rotella
     url: 'https://rotella.fr/'
-  - name: Balthazar Bauer
 created: 2016
 license:
   name: Creative Commons 4.0 Attribution-ShareAlike
