@@ -188,7 +188,7 @@ Vous pouvez remarquer que le résultat final **15** se trouve au sommet de la pi
 
 Votre programme pourra se composer des fonctions suivantes :
 
-* Une fonction `estOperateur(c)` qui prend en entrée un caractère et renvoie `True` s'il s'agit d'un opérateur et `False` sinon.
+* Une fonction `est_operateur(c)` qui prend en entrée un caractère et renvoie `True` s'il s'agit d'un opérateur et `False` sinon.
 * Une fonction `calcul(op, n, m)` qui prend en entrée un opérateur `op` parmi les quatre opérateurs autorisés et deux entiers `n` et `m` et qui renvoie le résultat du calcul `n op m`.
 * La fonction `evaluation(s)` qui prend en entrée une expression sous-forme de chaîne de caractères en notation polonaise inverse et renvoie le résultat du calcul.
 * Testez votre programme pour le calcul de l'expression $$5*(8-3)*3+((3−1)*2)/3$$ dont l'écriture en NPI est 
