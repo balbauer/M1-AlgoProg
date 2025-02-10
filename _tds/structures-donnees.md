@@ -153,7 +153,7 @@ Pour réaliser votre programme vous pouvez suivre ces étapes :
 
 * Écrire une fonction `est_fermante(c)` qui prend en entrée un caractère `c` et qui renvoie `true` si et seulement `c` est un symbole ouvrant.
 
-* Écrire une fonction `ouvrante(c)` qui prend en entrée un caractère `c`. Si ce caractère est un symbole ouvrant, alors la fonction doit renvoyer le symbole fermant correspondant. Dans le cas contraire elle doit renvoyer une erreur.
+* Écrire une fonction `ouvrante(c)` qui prend en entrée un caractère `c`. Si ce caractère est un symbole ouvrant, alors la fonction doit renvoyer le symbole fermant correspondant. Dans le cas contraire elle doit renvoyer une erreur (On utilisera la commande "`panic!("La fonction ouvrante prend une parenthèse fermante en argument")`" pour renvoyer une erreur).
 
 * Écrire et tester la fonction qui vérifie le parenthésage.
 
@@ -196,33 +196,29 @@ Votre programme pourra se composer des fonctions suivantes :
 
 
 
-## Les tables de hachage en Rust
+## Les dictionnaires en Rust
 
-Un *dictionnaire* est une structure de données en Python qui permet d'accèder à ses éléments à l'aide d'un indice spécifique qu'on appelle la **clef**. Les informations qui y sont sauvegardées ne s'y trouvent pas dans un ordre précis (comme c'est le cas des listes), mais la clé nous aide à accéder à celles-ci. Par exemple, un dictionnaire peut contenir un carnet téléphonique et on peut accéder au numéro de téléphone souhaité à l'aide du nom de la personne. Le nom joue alors ici le rôle de la clé.  
+Un *dictionnaire* est une structure de données en Rust qui permet d'accèder à ses éléments à l'aide d'un indice spécifique qu'on appelle la **clef**. Les informations qui y sont sauvegardées ne s'y trouvent pas dans un ordre précis (comme c'est le cas des listes), mais la clef nous aide à accéder à celles-ci. Par exemple, un dictionnaire peut contenir un carnet téléphonique et on peut accéder au numéro de téléphone souhaité à l'aide du nom de la personne. Le nom joue alors ici le rôle de la clef.  
 
 On reconnaît un dictionnaire au fait que ses éléments sont entourés par une paire d'accolades. On note alors un dictionnaire vide par `{ }`.
 
-Supposons qu'on souhaite créer un dictionnaire pour traduire les couleurs du français en anglais.
+Supposons qu'on souhaite créer un dictionnaire pour traduire les couleurs du français vers l'allemand.
 
-~~~python
->>> dico = {}
->>> dico['vert'] = 'green'
->>> dico['rouge'] = 'red'
->>> dico['noir'] = 'black'
->>> print(dico)
-{'noir': 'black', 'vert': 'green', 'rouge': 'red'} 
+~~~rust
+use std::collections::HashMap;
+
 ~~~
 
 Lorsque on affiche un dictionnaire, ceci apparaît sous la forme *clé-valeur*. Ici les mots français sont les clés, et les mots anglais les valeurs. Pour voir la traduction du mot *rouge* en anglais il suffit d'écrire
 
-~~~python
+~~~rust
 >>> print(dico['rouge'])
 red
 ~~~
 
 On peut supprimer un couple clé-valeur du dictionnaire avec la commande `del`
 
-~~~python
+~~~rust
 >>> del dico['noir']
 >>> print(dico)
 {'vert': 'green', 'rouge': 'red'}
