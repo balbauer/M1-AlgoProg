@@ -145,7 +145,7 @@ On procédera de la manière suivante
 
 ~~~rust
 let mut chaine = String::from("tuer n'est pas convaincre.");
-let premier_caractere = chaine.pop();
+let dernier_caractere = chaine.pop();
 chaine.push ('!'); 
 ~~~
 
@@ -216,9 +216,9 @@ Votre programme pourra se composer des fonctions suivantes :
 
 
 
-## Les dictionnaires en Python 
+## Les tables de hachage en Rust
 
-Un *dictionnaire* est une structure de données en Python qui permet d'accèder à ses éléments à l'aide d'un indice spécifique qu'on appelle la **clé**. Les informations qui y sont sauvegardées ne s'y trouvent pas dans un ordre précis (comme c'est le cas des listes), mais la clé nous aide à accéder à celles-ci. Par exemple, un dictionnaire peut contenir un carnet téléphonique et on peut accéder au numéro de téléphone souhaité à l'aide du nom de la personne. Le nom joue alors ici le rôle de la clé.  
+Un *dictionnaire* est une structure de données en Python qui permet d'accèder à ses éléments à l'aide d'un indice spécifique qu'on appelle la **clef**. Les informations qui y sont sauvegardées ne s'y trouvent pas dans un ordre précis (comme c'est le cas des listes), mais la clé nous aide à accéder à celles-ci. Par exemple, un dictionnaire peut contenir un carnet téléphonique et on peut accéder au numéro de téléphone souhaité à l'aide du nom de la personne. Le nom joue alors ici le rôle de la clé.  
 
 On reconnaît un dictionnaire au fait que ses éléments sont entourés par une paire d'accolades. On note alors un dictionnaire vide par `{ }`.
 
