@@ -30,11 +30,20 @@ Le fichier binaire construit est `target/debug/projet` (c'est à dire, c'est le 
 >>> ./target/debug/projet
 ~~~
 
+Ou alors, on peut tout simplement lancer la commande:
+
+~~~bash
+>>> cargo run
+~~~
+
+
 On peut ajouter de nouvelles bibliothèques à notre projet avec `cargo add`. Par exemple, pour ajouter la bibliothèque `fastrand` qui nous permet d'utiliser de l'aléa, on lancera:
 
 ~~~bash
 >>> cargo add fastrand
 ~~~
+
+Nota Bene : On peut remarquer que les commandes `cargo` n'ont pas besoin d'être lancées à la racine du projet, mais peuvent être lancées depuis n'importe où dans l'arborescence du projet.
 
 
 ## Premières manipulations de la bibliothèque `fastrand`
