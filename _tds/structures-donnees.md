@@ -110,7 +110,7 @@ enum Listeentiers {
 }
 ~~~
 
-Ecrire une fonction d'affichage `printlisteentiers`, ainsi que deux fonction `pop_entier` et `push_entier` abordées en cours.
+Ecrire une fonction d'affichage `printlisteentiers`, ainsi que les deux fonctions `pop_entier` et `push_entier` abordées en cours.
 
 
 
@@ -144,36 +144,16 @@ Pour cet exercie, il peut être intéressant d'utiliser le type `String` qui per
 On procédera de la manière suivante
 
 ~~~rust
-let mut chaine = String::from("tuer n'est pas convaincre.");
+let mut chaine = String::from("Tuer n'est pas convaincre.");
 let dernier_caractere = chaine.pop();
 chaine.push ('!'); 
 ~~~
 
-<!--# This is a comment 
-Voici une fonctionnalité des listes en Python qui peut vous aider dans la réalisation de votre programme :
-
-~~~python
->>> L = ['a', 'b', 'c', 'd']
->>> L.pop()
-'d'
->>> print(L)
-['a', 'b', 'c']
-~~~
-
-La méthode `pop()`appliquée à une liste, dépile et renvoie l'élément au sommet de la pile. La méthode `append(a)`quant à elle, ajoute l'élément `a` au sommet de la pile.
-
-~~~python
->>> L.append('e')
->>> print(L)
-['a', 'b', 'c', 'e']
-~~~
--->
-
 Pour réaliser votre programme vous pouvez suivre ces étapes :
 
-* Écrire une fonction `estOuvrante(c)` qui prend en entrée un caractère `c` et qui renvoie `True` si `c` est un symbole ouvrant.
+* Écrire une fonction `est_fermante(c)` qui prend en entrée un caractère `c` et qui renvoie `true` si et seulement `c` est un symbole ouvrant.
 
-* Écrire une fonction `fermante(c)` qui prend en entrée un caractère `c`. Si ce caractère est un symbole ouvrant, alors la fonction doit renvoyer le symbole fermant correspondant. Dans le cas contraire elle doit renvoyer `None`.
+* Écrire une fonction `ouvrante(c)` qui prend en entrée un caractère `c`. Si ce caractère est un symbole ouvrant, alors la fonction doit renvoyer le symbole fermant correspondant. Dans le cas contraire elle doit renvoyer une erreur.
 
 * Écrire et tester la fonction qui vérifie le parenthésage.
 
