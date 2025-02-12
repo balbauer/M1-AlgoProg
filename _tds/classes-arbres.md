@@ -99,13 +99,13 @@ Créez une classe `Ville` ayant 5 champs : chacun de ces champs doit correspondr
 
 Ajoutez ensuite les 3 méthodes suivantes à votre classe :
 
-* Une méthode `getRang(self)` qui renvoie la valeur du champ *rang*,
+* Une méthode `get_rang(self)` qui renvoie la valeur du champ *rang*,
 
-* Une méthode `getSuperficie(self)` qui renvoie la valeur du champ *superficie*,
+* Une méthode `get_superficie(self)` qui renvoie la valeur du champ *superficie*,
 
-* Une méthode `afficherNom(self)` qui affiche la valeur du champ *nom*,
+* Une méthode `afficher_nom(self)` qui affiche la valeur du champ *nom*,
 
-* Une méthode `afficherVille(self)` qui affiche les valeurs des quatre premiers champs.
+* Une méthode `afficher_ville(self)` qui affiche les valeurs des quatre premiers champs.
 
 Testez votre classe en tapant :
 
@@ -156,7 +156,7 @@ Dotez votre classe `Noeud` d'une méthode `inserer(self, liste)` qui prendra com
 
 **:**{:.exercise} 
 
-Écrivez une méthode  `afficherArbre(self)` qui affichera les noms des villes sauvegardées dans l'arbre en suivant un **parcours infixe**.
+Écrivez une méthode  `afficher_arbre(self)` qui affichera les noms des villes sauvegardées dans l'arbre en suivant un **parcours infixe**.
 
 Testez votre code :
 
@@ -189,7 +189,7 @@ Bordeaux
 
 **:**{:.exercise} 
 
-Modifiez la méthode `afficherArbre(self)`afin qu'elle affiche le nom, le numéro de département et la population de chaque ville.
+Modifiez la méthode `afficher_arbre(self)`afin qu'elle affiche le nom, le numéro de département et la population de chaque ville.
 
 
 ~~~
@@ -222,7 +222,7 @@ Saint-Brieuc
 
 **:**{:.exercise} 
 
-Écrivez une méthode `compterEnfants(self)` qui compte le nombre d'enfants (0, 1 ou 2) d'un noeud de l'arbre.
+Écrivez une méthode `compter_enfants(self)` qui compte le nombre d'enfants (0, 1 ou 2) d'un noeud de l'arbre.
 
 Testez votre code :
 
