@@ -97,7 +97,7 @@ Tri-Bulles(T)
 
 ~~~rust
 for i in (0..10).rev() {
-    \\Metre votre code ici
+    //Mettre votre code ici
 }
 ~~~
 
