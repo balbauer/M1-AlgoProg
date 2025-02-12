@@ -105,7 +105,7 @@ On va donc utiliser le type somme pour construire un type correspondant aux list
 
 ~~~rust
 enum Listeentiers {
-    Case(i32, Box<Liste>),
+    Case(i32, Box<Listeentiers>),
     Listevide,
 }
 ~~~
