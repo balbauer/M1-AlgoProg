@@ -21,6 +21,13 @@ Puis pour exécuter le binaire on lancera
 >>> ./exemple.bin
 ~~~
 
+A noter que dans certains cas, lors de la compilation, ça ne fonctionne pas, on reçoit une erreur `linker 'cc' not found`, cela signifie qu'il manque des bibliothèques de compilation C nécessaires pour tout faire fonctionner. Pour y remédier, il faut alors installer ces bibliothèques sur votre système d'exploitation avec la commande : 
+
+~~~bash
+sudo apt install build-essential
+~~~
+
+
 ## Structure générale d'un fichier de code
 En Rust, lors de l'execution d'un programme, on lance la fonction main(). Ainsi le coeur du code qu'on veut executer sera à l'intérieur de cette fonction. On note que tout ce qui suit '`//`' (sur la même ligne) sera ignoré par le compilateur.
 ~~~rust
