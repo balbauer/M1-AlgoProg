@@ -42,7 +42,7 @@ Cours & TD le mercredi de 13h50 à 17h00, salle G207 Bâtiment Sophie Germain
   
   **TD :** [Structures de données](tds/structures-donnees)
 
-<!--# C'est un commentaire
+
 #### 19 février
 
 **Arbres**
@@ -50,8 +50,8 @@ Cours & TD le mercredi de 13h50 à 17h00, salle G207 Bâtiment Sophie Germain
 
 **TD :** [Arbres](tds/classes-arbres)
 
-
-#### 26 février
+<!--# C'est un commentaire
+#### 5 février
 
 **Programmation dynamique**
    - Exponentiation rapide
