@@ -93,7 +93,13 @@ Tri-Bulles(T)
 
 **:**{:.exercise} 
 
-* Implémentez cette version de l'algorithme en Rust et testez-là en lui donnant en entrée un tableau aléatoire de nombres entiers en utilisant la fonction `tableaualeatoire` implémentée dans l'exercice précédent.
+* Implémentez cette version de l'algorithme en Rust et testez-là en lui donnant en entrée un tableau aléatoire de nombres entiers en utilisant la fonction `tableaualeatoire` implémentée dans l'exercice précédent. On pourra utiliser la méthode suivante pour faire des boucles `for` décrémentales (dans l'exemple ci-dessous `i` parcourt les entiers de `9` à `0`):
+
+~~~rust
+for i in (0..10).rev() {
+    \\Metre votre code ici
+}
+~~~
 
 * Pourquoi la version de l'algorithme que vous venez d'implémenter n'est pas optimale? Pour répondre à cette question, on peut remarquer que dans l'exemple précédent le tableau est déjà trié après seulement le deuxième passage. Dans ce cas, a-t-on besoin d'exécuter l'algorithme jusqu'à la fin?
 
