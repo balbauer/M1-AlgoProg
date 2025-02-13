@@ -13,7 +13,7 @@ Pendant ces TP vous travaillerez sur vos machines. Pour installer Rust sur vos m
 >>> rustup update
 ~~~
 
-Si tout s'est passé sans encombre à ce stade. Fermez le terminal que vous utilisez, et ouvrez en un nouveau, afin qu'il y ait une réinitialisation pour prendre en compte l'ajout des nouveaux concernant Rust.
+Si tout s'est passé sans encombre à ce stade, fermez le terminal que vous utilisez, et ouvrez en un nouveau afin qu'il y ait une réinitialisation pour prendre en compte l'ajout des nouveaux concernant Rust.
 Ensuite il vous suffit de rédiger votre code dans un fichier (par exemple exemple.rs) avec l'extension .rs. Puis pour compiler le fichier on peut utiliser la commande :
 ~~~bash
 >>> rustc exemple.rs -o exemple.bin
