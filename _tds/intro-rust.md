@@ -254,7 +254,7 @@ fn succ(n:i32){
 incr(n);
 print!("{}",n);
 ~~~
-On va donc devoir utiliser une stratégie similaire à celle des pointeurs dans le langage C. Si Rust a une gestion des adresses, et des pointeurs similaires à celle de C. Dans ce cours, on priviligiera l'utilisation des références. L'idée est la suivante, `n` n'est plus vraiment une variable, mais une case-mémoire qui contient un entier modifiable de 64 bits (initialisé à `5`). Le type de cette case est `&mut i32` (comprendre case contenant un entier modifiable de 32 bits). Et pour le définir, on utilisera l'expression '`&mut`' (qui joue le même rôle que le '`ref`' en ocaml).
+On va donc devoir utiliser une stratégie similaire à celle des pointeurs dans le langage C. Si Rust a une gestion des adresses, et des pointeurs similaires à celle de C, dans ce cours, on priviligiera considérer la notion plus haut niveau de références. L'idée est la suivante : `n` n'est plus vraiment une variable, mais une case-mémoire qui contient un entier modifiable de 64 bits (initialisé à `5`). Le type de cette case est `&mut i32` (comprendre 'case contenant un entier modifiable de 32 bits'). Et pour le définir, on utilisera l'expression '`&mut`' (qui joue le même rôle que le '`ref`' en ocaml) de la manière suivante :
 
 ~~~rust
 let n : &mut i32= &mut 5;
