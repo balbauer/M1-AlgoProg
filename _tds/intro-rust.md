@@ -72,7 +72,7 @@ let (x, y, z) = (1, 2.0, "Bonjour");
 
 A noter que dans le cas où la variable est inutilisé, on peut la préfixer par un '`_`' pour ne pas avoir d'avertissement de la part du compilateur.
 
-On peut indiquer de quel type est la variable qu'on a déclaré.
+On peut indiquer de quel type est la variable qu'on a déclarée.
 
 
 Si en Rust il n'est pas nécessaire d'écrire des lignes de code spécifiques pour définir le type des variables avant de pouvoir les utiliser, c'est une bonne habitude d'indiquer le type des variables qu'on utilise au moment de leur création afin de faciliter le deboggage, même si il suffit d'assigner une valeur à un nom de variable pour que celle-ci soit automatiquement créée avec le type qui correspond à la valeur fournie. On dit alors que Rust est un langage à **typage statique**, contrairement aux langages à **typage dynamique** comme c'est le cas de Python.
