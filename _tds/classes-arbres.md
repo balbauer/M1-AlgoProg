@@ -1,5 +1,5 @@
 ---
-title: Les classes en Rust (suite) : Les arbres
+title : Les classes en Rust (suite) : Les arbres
 ---
 
 ## Le type Option
