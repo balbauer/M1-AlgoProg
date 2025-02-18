@@ -1,80 +1,7 @@
 ---
-title: Les classes en Rust / Arbres
+title: Les classes en Rust (suite) : Les arbres
 ---
 
-## Les classes
-
-Rust est un langage qui épouse certains paradigme de l'orienté-objet. Un **objet** est une entité qu'on crée par *instantiation* à partir d'une classe. Une **classe** est un type permettant de regrouper dans la même structure les *informations* (champs, propriétés, attributs) relatives à une entité ainsi que les *fonctions*, qu'on appelle **méthodes** permettant de les manipuler. Les champs et les méthodes constituent les *membres* de la classe.
-
-La création d'un objet se fait en deux étapes. On décrit d'abord à quoi ressemble notre objet et on demande ensuite à l’ordinateur d’utiliser cette description pour le fabriquer. Créons une classe `Etudiant`.
-
-~~~rust
-struct Etudiant {
-    nom: String,
-    prenom : String,
-    numero_etudiant :i64,
-    age : i32
-}
-~~~
-
-La classe `Etudiant` modélise d'une certaine façon l'entité *étudiant* et décrit ses caractéristiques principales à travers ses *champs*.
-
-* Le mot `struct` est un mot-clef utilisé lorsqu'on définit une nouvelle classe.
-* `Etudiant` est le nom de la classe. Par convention, le nom de la classe commence par une lettre majuscule et ne comporte pas d'espaces. On écrit par exemple : `Nomdelaclasse`.
-* `__init__` est une méthode spéciale, appelée **constructeur**, qui permet de construire et personnaliser des objets. Le constructeur, lorsqu'il est appelé, crée et renvoie un objet du type voulu et contenant ce qui est passé en paramètre. Contrairement à d'autres langages orientés-objet, le constructeur en Python porte toujours le même nom.
-* Le mot `self` (soi) fait référence à une instance de la classe (celle que nous sommes en train de créer ou de manipuler). C'est l'équivalent de `this` en Java ou d'autres langages.
-* Notre classe `Etudiant` comporte quatre attributs ou champs. À la création d'un nouvel objet, on initialise ses champs  à l'aide des valeurs qu'on passe comme arguments au constructeur.
-
-Créons maintenant un objet `Etudiant`.
-
-~~~python
->>> unEtudiant = Etudiant("Dupont", "Marcel", 2110012, 23)
-~~~
-
-Nous allons maintenant voir comment définir les *méthodes d'instance* d'une classe. Ce sont des méthodes (fonctions) qui s'appliquent directement aux objets, instances de la classe. Vous avez déjà utilisé des méthodes d'instance plusieurs fois sans vous en rendre probablement compte. Par exemple, lorsque vous écrivez
-
-~~~python
->>> liste = list([1, 2, 3])
->>> liste.append(4)
->>> print(liste)
-[1, 2, 3, 4]
-~~~
-
-vous appelez la *méthode* `append()` de la classe `list` sur l'objet `liste` qui est une instantiation de la classe `list`. D'ailleurs, en écrivant `liste = list([1, 2, 3])` vous êtes en train d'appeler un constructeur de la classe `list`.
-
-Voici alors quelques méthodes que nous pouvons définir dans notre classe `Etudiant`.
-
-~~~python
->>> class Etudiant :
-...     def __init__(self, nom, prenom, numero_etudiant, age) :
-...         self.nom = nom
-...         self.prenom = prenom
-...         self.numero_etudiant = numero_etudiant
-...         self.age = age
-...
-...     def getNom(self) :
-...         return self.nom
-...
-...     def getPrenom(self) :
-...         return self.prenom
-...
-...     def estPlusAgeQue(self, age) :
-...         if self.age > age :
-...             return True
-...         else :
-...             return False     
-~~~
-
-* Toutes les méthodes d'instance prennent `self` comme premier argument. L'utilisation d'une méthode d'instance est très simple. Il suffit d'écrire le nom de l'objet, suivi par un '`.`' et suivi ensuite par le nom de la méthode.
-
-~~~python
->>> print(unEtudiant.getNom())
-Dupont
->>> print(unEtudiant.getPrenom())
-Marcel
->>> print(unEtudiant.estPlusAgeQue(30)
-False
-~~~
 
 ## Une classe Ville
 
@@ -95,31 +22,15 @@ Versailles 78 85761 26.2 46
 
 **:**{:.exercise} 
 
-Créez une classe `Ville` ayant 5 champs : chacun de ces champs doit correspondre aux 5 informations concernant une ville comme décrit ci-dessus (nom, numéro de département, population, superficie, rang). Le constructeur prendra en paramètre une liste `liste`, et initialisera les 5 champs avec les 5 premières cases de la liste (`liste[0], liste[1]`) etc.
+Créez une classe `Ville` ayant 5 champs : chacun de ces champs doit correspondre aux 5 informations concernant une ville comme décrit ci-dessus (nom, numéro de département, population, superficie, rang). Le constructeur prendra en paramètre un tuple, et initialisera les 5 champs avec les 5 premières entrées du tuple.
 
-Ajoutez ensuite les 3 méthodes suivantes à votre classe :
+Ajoutez ensuite les 2 méthodes suivantes à votre classe :
 
-* Une méthode `get_rang(self)` qui renvoie la valeur du champ *rang*,
+* Une fonction `afficher_nom(self)` qui affiche la valeur du champ *nom*,
 
-* Une méthode `get_superficie(self)` qui renvoie la valeur du champ *superficie*,
+* Une fonction `afficher_ville(self)` qui affiche les valeurs des quatre premiers champs.
 
-* Une méthode `afficher_nom(self)` qui affiche la valeur du champ *nom*,
-
-* Une méthode `afficher_ville(self)` qui affiche les valeurs des quatre premiers champs.
-
-Testez votre classe en tapant :
-
-~~~python
-
->>> liste = ["Maisons-Alfort", 94, 51091, 5.4, 100]
->>> ville = Ville(liste)
->>> print(ville.getRang())
-100
->>> print(ville.getSuperficie())
-5.4
->>> ville.afficherVille()
-Maisons-Alfort 94 51091 5.4
-~~~
+Testez votre classe en tapant avec le tuple `("Maisons-Alfort", 94, 51091, 5.4, 100).
 
 Vous devez maintenant parcourir le fichier et créer un nouvel objet ville à partir des informations contenues dans chaque ligne du fichier. Pour cela, il vous suffit de copier-coller le code ci-dessous :
 
