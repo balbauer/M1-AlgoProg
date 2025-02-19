@@ -79,11 +79,11 @@ return val
 La première ligne du main indique que nous allons ouvrir le fichier `villes.txt` et convertir son contenu en une longue chaîne de caractères. Puis nous chacune les lignes dans la file parts.
 Puis pour chacune de ces ligne, on redécoupe la ligne en une plus petite file, et on défile en convertissant le résultat en une ville grâce à la fonction `convert_to_ville` définie plus bas.
 
-On peut remarquer l'utilisation du mot-clef `derive` utilisé juste avant la définition de la classe Ville. Cela permet d'utiliser certains traits (ici clone et copy) sur cette classe sans avoir besoin de les redéfinir. En l'occurrence ces traits sont nécessaires car implicitement utilisés lors du remplissage d'un tableau par exemple.
+On peut remarquer l'utilisation du mot-clef `derive` utilisé juste avant la définition de la classe Ville. Cela permet d'utiliser certains traits (ici `clone` et `copy`) sur cette classe sans avoir besoin de les redéfinir. En l'occurrence ces traits sont nécessaires car implicitement utilisés lors du remplissage d'un tableau par exemple.
 
 ## Construire un arbre binaire de recherche
 
-Notre but maintenant est d'insérer toutes ces villes dans un arbre binaire de recherche. Les noeuds de l'arbre seront les objets de la classe `Ville`. Dans un premier temps, la valeur qui nous permettra de créer un *ordre*, sera l'attribue rang. Ceci veut dire qu'on va comparer les villes selon leur rang. Par exemple on va dire que `Meulon < Paris`.
+Notre but maintenant est d'insérer toutes ces villes dans un arbre binaire de recherche. Les noeuds de l'arbre seront les objets de la classe `Ville`. Dans un premier temps, la valeur qui nous permettra de créer un *ordre*, sera l'attribue rang. Ceci veut dire qu'on va comparer les villes selon leur rang. Par exemple on va dire que `Meudon < Paris`.
 
 Commencez par créer une classe `Noeud` correspondant aux arbres binaires vus en cours. On n'hésitera pas à se servir du type option pour exprimer qu'un ils peut correspondre à une arbre vide:
 
