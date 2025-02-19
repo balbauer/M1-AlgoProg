@@ -32,7 +32,7 @@ Versailles 78 85761 26.2 46
 **:**{:.exercise} 
 
 On va créer une classe `Ville` ayant 5 champs : chacun de ces champs doit correspondre aux 5 informations concernant une ville comme décrit ci-dessus (nom, numéro de département, population, superficie, rang). Le constructeur prendra en paramètre un tuple, et initialisera les 5 champs avec les 5 premières entrées du tuple.
-
+Le fichier qui suit gère la création de la classe, mais aussi l'extraction des données du fichier vers le tableau `tableau_ville`, ce sera la base de votre code :
 
 ~~~rust
 use std::io::{self};
@@ -78,6 +78,8 @@ return val
 
 La première ligne du main indique que nous allons ouvrir le fichier `villes.txt` et convertir son contenu en une longue chaîne de caractères. Puis nous chacune les lignes dans la file parts.
 Puis pour chacune de ces ligne, on redécoupe la ligne en une plus petite file, et on défile en convertissant le résultat en une ville grâce à la fonction `convert_to_ville` définie plus bas.
+
+On peut remarquer l'utilisation du mot-clef `derive` utilisé juste avant la définition de la classe Ville. Cela permet d'utiliser certains traits (ici clone et copy) sur cette classe sans avoir besoin de les redéfinir. En l'occurrence ces traits sont nécessaires car implicitement utilisés lors du remplissage d'un tableau par exemple.
 
 ## Construire un arbre binaire de recherche
 
