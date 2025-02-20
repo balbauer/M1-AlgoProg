@@ -45,7 +45,14 @@ On peut construire des types à partir de produits cartésiens, il faut alors me
 struct Typepair(f64, i32);
 ~~~
 
-Mais on peut aussi construire des structures avec un système de champs, on utilise alors les accolades '`{`', et '`}`' de la manière suivante :
+Pour créer ou accéder à une donnée, on peut utiliser le mot-clef `let` de la manière suivante :
+
+~~~rust
+let pair_exemple = Typepair(1., 76);
+let Typepair(x, y) = pair_exemple;
+~~~
+
+On peut aussi construire des structures avec un système de champs, on utilise alors les accolades '`{`', et '`}`' de la manière suivante :
 
 ~~~rust
 struct Point {
@@ -98,6 +105,9 @@ Poupeepleine,
 Poupeevide(Box<Poupeerusse>)
 }
 ~~~
+
+A noter que l'utilisation de Box "empaquette" la donnée dans une référence/étiquette.
+
 
 ## Les listes simplement chaînées
 
