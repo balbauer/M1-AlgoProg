@@ -291,7 +291,7 @@ Faites une fonction en Python qui génére un dictionnaire pour la [suite de Fib
 * $$ F_1 = 1 $$, 
 * $$ F_{n+2} = F_{n+1} + F_{n}$$.
 
-Les clés du dictionnaire seront les termes $$F_n$$ et les valeurs seront les indices $$n$$. Votre fonction `fibonacci(n)` prendra donc en argument un entier `n` et retournera le dictionnaire.
+Les clefs du dictionnaire seront les termes $$F_n$$ et les valeurs seront les indices $$n$$. Votre fonction `fibonacci(n)` prendra donc en argument un entier `n` et retournera le dictionnaire qui gère les `n+1` premiers termes de la suite de Fibonacci.
 
 
 ### Chiffrement par décalage
