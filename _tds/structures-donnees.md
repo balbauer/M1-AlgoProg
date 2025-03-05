@@ -126,7 +126,7 @@ Ecrire une fonction d'affichage `printlisteentiers`, ainsi que les deux fonction
 
 ## Parenthésage
 
-Le but de cet exercice est d'écrire un programme en Python capable de vérifier si une expression est bien parenthésée ou pas. Les trois types de parenthésage qui seront pris en compte sont les parenthèses `(`, `)`, les crochets `[`, `]` et les accolades `{`, `}`.
+Le but de cet exercice est d'écrire un programme en Rust capable de vérifier si une expression est bien parenthésée ou pas. Les trois types de parenthésage qui seront pris en compte sont les parenthèses `(`, `)`, les crochets `[`, `]` et les accolades `{`, `}`.
 
 Votre programme doit par exemple renvoyer `true` pour les expressions suivantes :
 
