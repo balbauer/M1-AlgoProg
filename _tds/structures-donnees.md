@@ -61,7 +61,7 @@ struct Point {
 }
 ~~~
 
-Et pour créer et accèder aux données, on le fait de la manière suivante:
+Et pour créer et accèder aux données, on peut le faire de la manière suivante:
 ~~~rust
 let point1 = Point{abscisse : 3. , ordonnee :2.} ;
 let x = point1.abscisse ;
@@ -80,7 +80,8 @@ enum Aliments <'a>{
 
 On remarque que dès qu'on utilise un type référence (comme le type '`&str`'), il faut rajouter `'a` comme indiqué ci-dessus.
 
-On remarque avec l'exemple qui suit qu'il peut être lourd d'utiliser ce type en pratique:
+
+On remarque avec l'exemple qui suit qu'il peut être lourd d'utiliser le type ci-dessus en pratique:
 
 ~~~rust
 let petite_noix_dans_ma_poche = Aliments::Noix;
@@ -100,9 +101,9 @@ let fromage_qui_traine_dans_le_frigo = Gruyere{nb_trous:32, epaisseur_croute: 0.
 Un type peut se faire référence à lui même, mais il doit alors utiliser le mot clef `Box`, et les crochets de la manière suivante :
 
 ~~~rust
-enum Poupeerusse {
-Poupeepleine,
-Poupeevide(Box<Poupeerusse>)
+enum PoupeeRusse {
+PoupeePleine,
+Poupeevide(Box<PoupeeRusse>)
 }
 ~~~
 
@@ -114,10 +115,37 @@ A noter que l'utilisation de Box "empaquette" la donnée dans une référence/é
 On va donc utiliser le type somme pour construire un type correspondant aux listes simplement chaînées de la manière suivante :
 
 ~~~rust
-enum Listeentiers {
-    Case(i32, Box<Listeentiers>),
-    Listevide,
+use std::mem;
+
+#[derive(PartialEq)]
+enum List {
+    ListeVide,   \\Pour la liste vide
+    ListePasVide {
+    elem: i32,   \\ La tête de la liste
+    next: Box<List>,   \\La queue de la liste encapsulée dans un pointeur via le mot-clef Box
+	}
 }
+
+fn push (x : i32, list : &mut List)-> () {
+let nouveau = mem::replace(list, List::ListeVide);
+*list = List::ListePasVide{elem : x, next : (Box::new(nouveau))}
+}
+
+
+
+fn pop (list : &mut List)-> i32 {
+	match list {
+	List::ListeVide => {
+            panic!("Pas de pop sur une liste vide!");
+        }
+        List::ListePasVide{ elem: a, next: b }=> {
+            let x = *a ;                         \\On extrait la tête (encapsulée dans une référence)
+        	match b { list2 => *list = mem::replace(list2, List::Empty) }
+        	x
+        }
+   }
+}
+
 ~~~
 
 Ecrire une fonction d'affichage `printlisteentiers`, ainsi que les deux fonctions `pop_entier` et `push_entier` abordées en cours.
