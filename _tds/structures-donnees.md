@@ -72,7 +72,7 @@ Enfin, on peut aussi construire un type somme (c'est à dire une union de diffé
 ~~~rust
 enum Aliments <'a>{
   Noix,
-  Grappe_de_raisins (i32),
+  GrappeDeRaisins (i32),
   Grenade {nb_pepins:i32,  couleur:&'a str},
   Gruyere {nb_trous:i64 , epaisseur_croute: f64}
 }
