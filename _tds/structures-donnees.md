@@ -118,7 +118,7 @@ On va donc utiliser le type somme pour construire un type correspondant aux list
 use std::mem;
 
 #[derive(PartialEq)]
-enum List {
+enum Liste {
     ListeVide,   \\Pour la liste vide
     ListePasVide {
     elem: i32,   \\ La tête de la liste
@@ -126,21 +126,21 @@ enum List {
 	}
 }
 
-fn push (x : i32, list : &mut List)-> () {
-let nouveau = mem::replace(list, List::ListeVide);
-*list = List::ListePasVide{elem : x, next : (Box::new(nouveau))}
+fn push (x : i32, list : &mut Liste)-> () {
+let nouveau = mem::replace(list, Liste::ListeVide);
+*list = Liste::ListePasVide{elem : x, next : (Box::new(nouveau))}
 }
 
 
 
-fn pop (list : &mut List)-> i32 {
+fn pop (list : &mut Liste)-> i32 {
 	match list {
-	List::ListeVide => {
+	Liste::ListeVide => {
             panic!("Pas de pop sur une liste vide!");
         }
-        List::ListePasVide{ elem: a, next: b }=> {
+        Liste::ListePasVide{ elem: a, next: b }=> {
             let x = *a ;                         \\On extrait la tête (encapsulée dans une référence)
-        	match b { list2 => *list = mem::replace(list2, List::Empty) }
+        	match b { list2 => *list = mem::replace(list2, Liste::ListeVide) }
         	x
         }
    }
