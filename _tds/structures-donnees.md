@@ -63,7 +63,7 @@ struct Point {
 
 Et pour créer et accèder aux données, on peut le faire de la manière suivante:
 ~~~rust
-let point1 = Point{abscisse : 3. , ordonnee :2.} ;
+let point1 = Point{abscisse : 3., ordonnee :2.} ;
 let x = point1.abscisse ;
 ~~~
 
@@ -74,7 +74,7 @@ enum Aliments <'a>{
   Noix,
   GrappeDeRaisins (i32),
   Grenade {nb_pepins:i32,  couleur:&'a str},
-  Gruyere {nb_trous:i64 , epaisseur_croute: f64}
+  Gruyere {nb_trous:i64, epaisseur_croute: f64}
 }
 ~~~
 
