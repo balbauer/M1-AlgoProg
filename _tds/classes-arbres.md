@@ -85,13 +85,13 @@ On peut remarquer l'utilisation du mot-clef `derive` utilisé juste avant la dé
 
 Notre but maintenant est d'insérer toutes ces villes dans un arbre binaire de recherche. Les noeuds de l'arbre seront les objets de la classe `Ville`. Dans un premier temps, la valeur qui nous permettra de créer un *ordre*, sera l'attribue rang. Ceci veut dire qu'on va comparer les villes selon leur rang. Par exemple on va dire que `Meudon < Paris`.
 
-Commencez par créer une classe `Noeud` correspondant aux arbres binaires vus en cours. On n'hésitera pas à se servir du type option pour exprimer qu'un ils peut correspondre à une arbre vide:
+Commencez par créer une classe `Noeud` correspondant aux arbres binaires vus en cours. On n'hésitera pas à se servir du type option pour exprimer qu'ils peuvent correspondre à une arbre vide:
 
 Cette classe a donc trois attributs (comme attendu pour un AB) : un fils gauche, un fils droite, et une *valeur* pouvant être comparée (ou ayant des champs pouvant être comparés), qui est ici un objet de type `Ville`.
 
 **:**{:.exercise} 
 
-Dotez votre classe `Noeud` d'une fonction `inserer(self, liste)` qui prendra comme argument une ville et l'insérera dans l'arbre. Vous pouvez utiliser l'algorithme d'insertion vu en cours.
+Dotez votre classe `Noeud` d'une fonction `inserer(self, ville)` qui prendra comme argument une ville et l'insérera dans l'arbre. Vous pouvez utiliser l'algorithme d'insertion vu en cours.
 
 **:**{:.exercise} 
 
