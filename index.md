@@ -50,16 +50,12 @@ Cours & TD le mercredi de 13h50 à 17h00, salle G207 Bâtiment Sophie Germain
 
 **TD :** [Arbres](tds/classes-arbres)
 
-<!--# C'est un commentaire
-#### 5 février
 
-**Programmation dynamique**
-   - Exponentiation rapide
-   - Puissance d'une matrice, square and multiply
+
+#### 25 Mars
     
     
 **TD :** [Programmation dynamique](tds/prog-dynamique)
-
 
 
 
