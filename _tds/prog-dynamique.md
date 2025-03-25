@@ -51,7 +51,7 @@ Puisque nous cherchons à minimiser le nombre d'essais dans le pire cas, on cons
 
 On note `egg_drop(n,h)` le nombre minimal d'essais pour trouver l'étage critique (celui à partir duquel les œufs se brisent). Cette valeur peut être calculée de façon récursive en utilisant l'équation récursive suivante :
 
-$$\mathtt{egg_drop}(n,h) = 1 + \min_{x \in \{1, \dots h\}} \max(\mathtt{egg_drop}(n-1, x-1), \mathtt{egg_drop}(n, h-x)) $$ 
+$$\mathtt{egg\_drop}(n,h) = 1 + \min_{x \in \{1, \dots h\}} \max(\mathtt{egg\_drop}(n-1, x-1), \mathtt{egg\_drop}(n, h-x)) $$ 
 
 
 **:**{:.exercise} 
