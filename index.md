@@ -68,8 +68,7 @@ Cours & TD le mercredi de 13h50 à 17h00, salle G207 Bâtiment Sophie Germain
   - [CC 1, 2022](annales/2022-cc1.pdf)
   - [CC 2, 2022](annales/2022-cc2.pdf)
   - [Rattrapage 2022](annales/2022-rat.pdf)
-  
--->
+
 
 ## Bibliographie
 
