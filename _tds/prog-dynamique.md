@@ -56,7 +56,7 @@ $$\mathtt{egg\_drop}(n,h) = 1 + \min_{x \in \{1, \dots h\}} \max(\mathtt{egg\_dr
 
 **:**{:.exercise} 
 
-Écrire une fonction en Python, qui prend en entrée le nombre d'œufs $$n$$ et le nombre d'étages $$h$$ et qui renvoie le nombre optimal d'essais en se basant sur l'équation de récurrence ci-dessus.
+Écrire une fonction en Rust, qui prend en entrée le nombre d'œufs $$n$$ et le nombre d'étages $$h$$ et qui renvoie le nombre optimal d'essais en se basant sur l'équation de récurrence ci-dessus.
 
 Testez que pour $$n = 2$$ et $$h = 10$$ votre programme renvoie $$4$$. Testez l'efficacité de votre programme pour des valeurs plus grandes. Que se passe-t-il ? Pourquoi ? 
 
@@ -66,4 +66,4 @@ Si vous dessinez l'arbre de la récursivité pour des petites valeurs de $$n$$ e
 
 **:**{:.exercise}
 
-Concevoir un algorithme et l'implémenter ensuite en Python pour résoudre le problème selon les principes de la programmation dynamique.
+Concevoir un algorithme et l'implémenter ensuite en Rust pour résoudre le problème selon les principes de la programmation dynamique.
