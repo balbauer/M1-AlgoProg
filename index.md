@@ -72,16 +72,22 @@ Cours & TD le mercredi de 13h50 à 17h00, salle G207 Bâtiment Sophie Germain
 
 ## Bibliographie
 
-T. H. Cormen, C. E. Leiserson, R. L. Rivest, C. Stein.
-*Introduction à l'Algorithmique*.
-Trad. X. Cazin, G.-L. Kocher. Dunod 2010.
-ISBN : 978-2-10-054526-1. Côte BU: 005.1 COR.
+A. Benoit, Y. Robert, F. Vivien
+*A guide to algorithm design
+Paradigms, methods and complexity analysis*.
+CRC Press 2013. 
+ISBN : 9781439825648. <https://graal.ens-lyon.fr/~yrobert/algoL3/poly-algo.pdf>
 
 A. Bostan, F. Chyzak, M. Giusti, R. Lebreton, G. Lecerf, B. Salvy, É. Schost.
 *Algorithmes Efficaces en Calcul Formel*.
 686 pages. Imprimé par CreateSpace. Aussi disponible en version électronique.
 Palaiseau: Frédéric Chyzak (auto-édit.), sept. 2017.
 ISBN : 979-10-699-0947-2. <https://hal.archives-ouvertes.fr/AECF/>
+
+T. H. Cormen, C. E. Leiserson, R. L. Rivest, C. Stein.
+*Introduction à l'Algorithmique*.
+Trad. X. Cazin, G.-L. Kocher. Dunod 2010.
+ISBN : 978-2-10-054526-1. Côte BU: 005.1 COR.
 
 C. H. Papadimitriou.
 *Computational complexity*.
