@@ -92,3 +92,7 @@ ISBN : 978-2-10-054526-1. Côte BU: 005.1 COR.
 C. H. Papadimitriou.
 *Computational complexity*.
 Addison-Wesley, 1994. 523 pages.
+
+
+S. NDIAYE
+<https://perso.liris.cnrs.fr/samba-ndojh.ndiaye/fichiers/App_Graphes.pdf>
