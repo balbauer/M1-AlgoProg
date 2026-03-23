@@ -94,5 +94,5 @@ C. H. Papadimitriou.
 Addison-Wesley, 1994. 523 pages.
 
 
-S. NDIAYE
+S. Ndiaye
 <https://perso.liris.cnrs.fr/samba-ndojh.ndiaye/fichiers/App_Graphes.pdf>
